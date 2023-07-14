@@ -1,12 +1,21 @@
 # Thesis Versioning
 [Thesis link](https://www.overleaf.com/read/mwzrhwrbmxhb)
 
+## 0.2.0
+`14-07-2023`
+- [x] Tóm tắt. (100-300 từ, 4-10 câu)
+	- [x] Ngữ cảnh, vấn đề. (2 câu)
+	- [x] Mục tiêu. (1 câu)
+	- [x] Phương pháp. (2 câu)
+	- [x] Kết quả. (2 câu)
+	- [x] Kết luận. (2 câu)
 ## 0.1.0
 `13-07-2023`
-- [] Lời cảm ơn. (1 trang)
+- [x] Lời cảm ơn. (1 trang)
 	- [x] Lời cảm ơn tới TS. Lê Đức Hùng.
 	- [x] Lời cảm ơn tới Nguyễn Văn Nhị.
-	- [] Phòng thí nghiệm DESLab.
+	- [x] Phòng thí nghiệm DESLab.
+	- [x] Thầy cô trong khoa.
 
 ## 0.0.0
 `13-07-2023`
