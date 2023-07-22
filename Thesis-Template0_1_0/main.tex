@@ -7,7 +7,8 @@
 % Nếu cập nhật tài liệu tham khảo, cũng cần build lại theo cách trên.
 
 \documentclass[oneside,a4paper,14pt]{extreport}
-
+% font size
+\usepackage[fontsize=13pt]{scrextend}
 % Font tiếng Việt
 \usepackage[T5]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -70,32 +71,29 @@
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-
-
-
  
 % Đổi tên mặc định
-\renewcommand{\chaptername}{Chương}
+\renewcommand{\chaptername}{CHƯƠNG}
 \renewcommand{\figurename}{Hình}
 \renewcommand{\tablename}{Bảng}
-\renewcommand{\contentsname}{Mục lục}
-\renewcommand{\listfigurename}{Danh sách hình}
-\renewcommand{\listtablename}{Danh sách bảng}
-\renewcommand{\appendixname}{Phụ lục}
+\renewcommand{\contentsname}{MỤC LỤC}
+\renewcommand{\listfigurename}{DANH SÁCH CÁC HÌNH}
+\renewcommand{\listtablename}{DANH SÁCH CÁC BẢNG}
+\renewcommand{\appendixname}{PHỤ LỤC}
 
 % Định dạng chapter
 \usepackage{titlesec}
 \titleformat{\chapter}
-    [display] 
-    {\normalfont\bfseries\Large}{\chaptername \ \thechapter}{10pt}{\huge}
-\titlespacing*{\chapter}{0pt}{-10pt}{40pt} %khoảng cách giữa chapter và đầu trang
+    [hang] 
+    {\filcenter\normalfont\bfseries\normalsize}{\chaptername \ \thechapter:}{10pt}{\normalsize}
+\titlespacing*{\chapter}{0pt}{-10pt}{10pt} %khoảng cách giữa chapter và đầu trang
 
 \titleformat{\section}
-    {\normalfont\bfseries\large}{\thesection}{1em}{}
+    {\normalfont\bfseries\normalsize}{\thesection}{1em}{}
  
 \titleformat{\subsection}
     {\normalfont\bfseries\normalsize}{\thesubsection}{1em}{}
-  
+
 % Dãn dòng 1.5
 \usepackage{setspace}
 \onehalfspacing
@@ -103,28 +101,46 @@
 % Thụt vào đầu dòng
 \usepackage{indentfirst}
 
+% Bottom right page numbering
+\usepackage{fancyhdr} % for use of \pageref{LastPage}
+\pagestyle{fancy} % Turn on the style
+\fancyhf{} % Start with clearing everything in the header and footer
+% Set the right side of the footer to be the page number
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}%
+% Redefine plain style, which is used for titlepage and chapter beginnings
+% From https://tex.stackexchange.com/a/30230/828
+\fancypagestyle{plain}{%
+    \renewcommand{\headrulewidth}{0pt}%
+    \fancyhf{}%
+    \fancyfoot[R]{\thepage}%
+}
+
 % Canh lề
 \usepackage[
   top=20mm,
-  bottom=10mm,
-  left=30mm,
+  bottom=20mm,
+  left=25mm,
   right=20mm,
   footskip = 15mm,
   includefoot]{geometry}
-  
+
 % Trang bìa
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \newcommand\HRule{\rule{\textwidth}{1pt}}
 
+% Danh sách chữ viết tắt
+\usepackage{myacronyms}
+
 % ========================================================================================= %
 % CHÚ Ý: Thông tin chung về KLTN - sinh viên điền vào đây để tự động update các trang khác  %
 % ========================================================================================= %
-\newcommand{\tenSV}{Nguyễn~Văn~A~-~Trần~Văn~B} % Dấu ~ là khoảng trắng không được tách (các chữ nối với nhau bằng dấu ~ sẽ nằm cùng 1 dòng
-\newcommand{\mssv}{1234567}
-\newcommand{\tenKL}{Sử~dụng~LaTeX trong Khoá~luận~tốt~nghiệp} % Chú ý dấu ~ trong tên khóa luận
-\newcommand{\tenGVHD}{Tên~Giáo~Viên}
-\newcommand{\tenBM}{Công nghệ tri thức}
+\newcommand{\tenSV}{Nguyễn~Vũ~Minh~Thành} % Dấu ~ là khoảng trắng không được tách (các chữ nối với nhau bằng dấu ~ sẽ nằm cùng 1 dòng
+\newcommand{\mssv}{19207103}
+\newcommand{\tenKL}{THỰC~HIỆN~NỀN~TẢNG~IOT~CLOUD~GIAO~TIẾP~PHẦN~CỨNG~KẾT~HỢP~KỸ~THUẬT~MẬT~MÃ~HÓA~NHẸ~CHO~CÁC~HỆ~THỐNG~IOT} % Chú ý dấu ~ trong tên khóa luận
+\newcommand{\tenGVHD}{TS.~Lê~Đức~Hùng}
+\newcommand{\tenBM}{}
 
 \begin{document}
 
@@ -136,20 +152,38 @@
 %\addcontentsline{toc}{chapter}{Lời cam đoan}
 %\include{Appendix/reassurances}
 
-\addcontentsline{toc}{chapter}{Lời cảm ơn}
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{LỜI CẢM ƠN}
 \include{Appendix/thanks}
 
-\addcontentsline{toc}{chapter}{Đề cương chi tiết}
-\include{Appendix/decuong}
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{TÓM TẮT}
+\include{Appendix/tomtat}
+
+% \phantomsection
+% \addcontentsline{toc}{chapter}{Đề cương chi tiết}
+% \include{Appendix/decuong}
 
 % Mục lục, danh sách hình, danh sách bảng
-\addcontentsline{toc}{chapter}{Mục lục}
+\phantomsection
+\addcontentsline{toc}{chapter}{MỤC LỤC}
 \tableofcontents
+% Danh sách chữ viết tắt
+\printglossary[type=\acronymtype,
+                title=DANH SÁCH CHỮ VIẾT TẮT, 
+                toctitle=DANH SÁCH CHỮ VIẾT TẮT
+                ]
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
-\listoftables
 
-\addcontentsline{toc}{chapter}{Tóm tắt}
-\include{Appendix/tomtat}
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
 
 \clearpage
 
@@ -166,19 +200,21 @@
 
 \include{Chapter5/chapter5}
 % Công trình của tác giả (nếu không có thì comment 02 dòng dưới)
-\addcontentsline{toc}{chapter}{Danh mục công trình của tác giả}
+\phantomsection
+\addcontentsline{toc}{chapter}{DANH MỤC CÔNG TRÌNH CỦA TÁC GIẢ}
 \include{Appendix/publish}
 
 % In tài liệu tham khảo
-\addcontentsline{toc}{chapter}{Tài liệu tham khảo}
-\printbibheading[title={Tài liệu tham khảo}]
+\phantomsection
+\addcontentsline{toc}{chapter}{TÀI LIỆU THAM KHẢO}
+\printbibheading[title={TÀI LIỆU THAM KHẢO}]
 
 \printbibliography[heading=subbibliography, title={Tiếng Việt}, keyword=Viet, resetnumbers=true]
 
 \DeclareNameAlias{sortname}{last-first}
 \DeclareNameAlias{default}{last-first}
 
-\printbibliography[heading=subbibliography, title={Tiếng Anh}, notkeyword=Viet, resetnumbers=4] 
+\printbibliography[heading=subbibliography, title={Tiếng Anh}, notkeyword=Viet, resetnumbers=1] 
 % ===================================================================== %
 % CHÚ Ý: phải gán lại resetnumbers=số tài liệu tham khảo tiếng Việt + 1 %
 % ===================================================================== %
