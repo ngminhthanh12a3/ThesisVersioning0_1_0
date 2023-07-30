@@ -1,0 +1,13 @@
+\chapter*{ABSTRACT}
+\label{Abstract-EN}
+
+% Context, Problems
+To assist managers of the \acrfull{vnpt} Tien Giang in monitoring \glspl{bts}, an \acrfull{iot} system and model were required to be constructed. The system must develop communication and synchronization techniques between sensors, physical devices, and a database in a \acrfull{vps}, as well as a customized graphical user interface for data visualization.
+% Objectives
+To achieve the above objectives, the \acrshort{iot} system will be constructed using a \acrfull{mcu} communicating things, server applications managing data, a customizable graphical interface, and lightweight cryptography.
+% Phương pháp
+The \acrshort{iot} system uses STM32 \acrshort{mcu} communicating things, ESP32 \acrshort{iot} gateway, self-designed protocol, and lightweight cryptography ChaCha20-Poly1305. The system runs server applications on the \acrshort{vps}, including an \acrshort{api} server, a \acrfull{mqtt} broker, and a MongoDB database, as well as a web server with a graphical interface.
+% Kết quả
+In the sensing system, STM32 \acrshort{mcu} has communication and synchronization mechanisms with the cloud, and the ESP32 gateway has a data-routing mechanism. Server applications are built in the \acrshort{vps} via Docker Containerization, an Nginx web server administers and provides a web interface, and cryptography is applied during the gateway-\acrshort{api} server transfer.
+% Kết luận
+The suggested \acrshort{iot} system has a model that is suited for communication and synchronization methods between devices, gateways, and the cloud; the web interface is versatile in terms of creating and displaying widgets. The lightweight cryptographic algorithm assures data security between the gateway and the cloud, and the protocol includes a dependable structure for frame detection and error detection.

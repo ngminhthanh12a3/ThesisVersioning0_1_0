@@ -1,6 +1,19 @@
 # Thesis Versioning
 [Thesis link](https://www.overleaf.com/read/mwzrhwrbmxhb)
 
+## 0.4.0
+`22-07-2023`
+- VĐK -> MCU
+- Fix **fig:IoT-4-Layer-Archi**
+- Use acronym for MQTT, VPS
+- [x] Tóm tắt (Tiếng Anh)
+	- [x] Context and Problems.
+	- [x] Objectives.
+	- [x] Methods
+	- [x] Results
+	- [x] Conclusion
+- [x] Make demo script.
+
 ## 0.3.0
 `14-07-2023`
 - Chỉnh sửa **Cách thức trình bày trong template**
@@ -17,7 +30,7 @@
 	- [x] "NGÀNH KỸ THUẬT ĐIỆN TỬ-VIỄN THÔNG"
 	- [x] "Các phần, mục, tiểu mục phải **có cỡ và kiểu chữ** theo cùng hệ thống"
 	- [x] Không đánh số trang bìa 2
-- [] Giới thiệu. (5 trang)
+- [ ] Giới thiệu. (5 trang)
 	- [x] 1. Đặt vấn đề
 		- [x] Ngữ cảnh, vấn đề cần giải quyết là gì? (2 đoạn)
 		- [x] Vì sao vấn đề/bài toán quan trọng và thú vị? (1 đoạn)
@@ -31,7 +44,7 @@
 		- [x] Giải pháp của bạn là gì? Kết quả thế nào?
 	- [x] 4. Đóng góp
 		- [x] Đóng góp của nghiên cứu/ứng dụng của bạn?
-	- [] 5. Bố cục
+	- [ ] 5. Bố cục
 ## 0.2.0
 `14-07-2023`
 - [x] Tóm tắt. (100-300 từ, 4-10 câu)
