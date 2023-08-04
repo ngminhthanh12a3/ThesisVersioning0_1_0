@@ -1,6 +1,24 @@
 # Thesis Versioning
 [Thesis link](https://www.overleaf.com/read/mwzrhwrbmxhb)
 
+## 0.5.0
+`31-07-2023`
+
+- Acronym for PTN, HTTP, GPIO, AEAD, AES, XOR, AAD.
+- Change none **sorting** of biblatex.
+- Chỉnh sửa tên KL: THỰC HIỆN NỀN TẢNG IOT **SỬ DỤNG** CLOUD GIAO TIẾP PHẦN CỨNG KẾT HỢP KỸ THUẬT MẬT MÃ HÓA NHẸ
+- Change **titleformat** of the chapter to **block**.
+- [x] Các hệ thống và công nghệ liên quan (15 trang)
+	- [x] Blynk (able to add pics)
+	- [x] ThingsBoard
+	- [x] ESP32
+	- [x] Hệ thống IoT sử dụng bo mạch của PTN DESLab giao tiếp VPS
+		- [x] Mô hình và sơ đồ của hệ thống IoT
+		- [x] Giao thức frame
+		- [x] Cơ chế đồng bộ
+		- [x] Giao diện web linh hoạt
+		- [x] Mật mã hóa nhẹ ChaCha20-Poly1305
+		
 ## 0.4.0
 `22-07-2023`
 - VĐK -> MCU

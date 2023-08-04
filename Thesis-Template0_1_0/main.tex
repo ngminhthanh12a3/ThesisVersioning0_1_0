@@ -16,7 +16,7 @@
 
 % Tài liệu tham khảo
 \usepackage[
-	sorting=nty,
+	sorting=none,
 	backend=bibtex,
 	defernumbers=true]{biblatex}
 \usepackage[unicode]{hyperref} % Bookmark tiếng Việt
@@ -83,9 +83,12 @@
 
 % Định dạng chapter
 \usepackage{titlesec}
+
+\setcounter{secnumdepth}{3}
+
 \titleformat{\chapter}
-    [hang] 
-    {\filcenter\normalfont\bfseries\normalsize}{\chaptername \ \thechapter:}{10pt}{\normalsize}
+    [block]
+    {\filcenter\normalfont\bfseries\normalsize}{\chaptername \ \thechapter :}{10pt}{\normalsize}
 \titlespacing*{\chapter}{0pt}{-10pt}{10pt} %khoảng cách giữa chapter và đầu trang
 
 \titleformat{\section}
@@ -93,6 +96,9 @@
  
 \titleformat{\subsection}
     {\normalfont\bfseries\normalsize}{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+    {\normalfont\bfseries\normalsize}{\thesubsubsection}{1em}{}
 
 % Dãn dòng 1.5
 \usepackage{setspace}
@@ -138,7 +144,7 @@
 % ========================================================================================= %
 \newcommand{\tenSV}{Nguyễn~Vũ~Minh~Thành} % Dấu ~ là khoảng trắng không được tách (các chữ nối với nhau bằng dấu ~ sẽ nằm cùng 1 dòng
 \newcommand{\mssv}{19207103}
-\newcommand{\tenKL}{THỰC~HIỆN~NỀN~TẢNG~IOT~CLOUD~GIAO~TIẾP~PHẦN~CỨNG~KẾT~HỢP~KỸ~THUẬT~MẬT~MÃ~HÓA~NHẸ~CHO~CÁC~HỆ~THỐNG~IOT} % Chú ý dấu ~ trong tên khóa luận
+\newcommand{\tenKL}{THỰC HIỆN NỀN TẢNG IOT SỬ DỤNG CLOUD GIAO~TIẾP PHẦN CỨNG KẾT HỢP KỸ THUẬT MẬT~MÃ~HÓA~NHẸ} % Chú ý dấu ~ trong tên khóa luận
 \newcommand{\tenGVHD}{TS.~Lê~Đức~Hùng}
 \newcommand{\tenBM}{}
 
@@ -214,7 +220,7 @@
 \addcontentsline{toc}{chapter}{TÀI LIỆU THAM KHẢO}
 \printbibheading[title={TÀI LIỆU THAM KHẢO}]
 
-\printbibliography[heading=subbibliography, title={Tiếng Việt}, keyword=Viet, resetnumbers=true]
+% \printbibliography[heading=subbibliography, title={Tiếng Việt}, keyword=Viet, resetnumbers=true]
 
 \DeclareNameAlias{sortname}{last-first}
 \DeclareNameAlias{default}{last-first}
@@ -225,7 +231,7 @@
 % ===================================================================== %
 
 % Phần phụ lục
-\include{Appendix/appendix1}
-\include{Appendix/appendix2}
+% \include{Appendix/appendix1}
+% \include{Appendix/appendix2}
 
 \end{document} 

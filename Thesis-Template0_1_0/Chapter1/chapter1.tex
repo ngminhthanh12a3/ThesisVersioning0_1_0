@@ -45,14 +45,14 @@ Việc sử dụng Blynk cloud không thể triển khai kỹ thuật mật mã 
 
 % Giải pháp của bạn là gì? Kết quả thế nào?
     % Mô hình: cấu trúc 4 lớp
-Mô hình của hệ thống được thiết kế theo mô hình IoT 4 lớp \cite{IoT-4-Layer-Archi}. Theo mô hình này, hệ thống IoT bao gồm 4 lớp chính: Perception Layer, Network Layer, Processing Layer, và Application Layer (minh họa như hình \ref{fig:IoT-4-Layer-Archi}). Mô hình IoT được triển khai ở các Access Point và \acrshort{vps}, và sử dụng các kết nối có dây và không dây (mô tả hình \ref{fig:IoT-Connections-Model}).
+Mô hình của hệ thống được thiết kế theo mô hình IoT 4 lớp (minh họa như hình \ref{fig:IoT-4-Layer-Archi}). Theo mô hình này, hệ thống IoT bao gồm 4 lớp chính: Perception Layer, Network Layer, Processing Layer, và Application Layer. Mô hình IoT được triển khai ở các Access Point và \acrshort{vps}, và sử dụng các kết nối có dây và không dây (mô tả hình \ref{fig:IoT-Connections-Model}).
 
     % Phần cứng
     % mô hình back-end
     % giao diện
     % giao tiếp và đồng bộ
     % mã hóa
-Cụ thể, tại perception layer, phần cứng của hệ thống là bo mạch của phòng thí nghiệm DESLab và sử dụng \acrshort{mcu} ESP32 và STM32 và các cảm biến đo nhiệt độ, dòng điện, điện thể, và contactor. Trong đó, STM32 là thiết bị giao tiếp vạn vật và ESP32 là \acrshort{iot} gateway.
+Cụ thể, tại perception layer, phần cứng của hệ thống là bo mạch của \acrfull{ptn} DESLab và sử dụng \acrshort{mcu} ESP32 và STM32 và các cảm biến đo nhiệt độ, dòng điện, điện thể, và contactor. Trong đó, STM32 là thiết bị giao tiếp vạn vật và ESP32 là \acrshort{iot} gateway.
 % 
 Tại \acrshort{vps} (network layer), hệ thống back-end là tập hợp của \acrfull{mqtt} Broker, MongoDB database, và EggJS server, và back-end được triển khai bằng kỹ thuật Docker Containerizing. Tại application layer, Nginx web-server được triển khai để cung cấp giao diện web trực quan hóa dữ liệu thiết bị cho người dùng.
 %
@@ -67,7 +67,7 @@ Cuối cùng, cũng trong processing layer, mật mã hóa nhẹ ChaCha20-Poly13
 \begin{figure}[htp]
 \centering
 \includegraphics[width=8 cm]{images/Thesis-Page-2-IoT-Archi.pdf}
-\caption{Mô hình 4 lớp của hệ thống IoT. Tham khảo \cite{IoT-4-Layer-Archi}}
+\caption{Mô hình 4 lớp của hệ thống IoT. Nguồn tham khảo InterviewBit~\cite{IoT-4-Layer-Archi}}
 \label{fig:IoT-4-Layer-Archi}
 \end{figure}
 
