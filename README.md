@@ -1,6 +1,25 @@
 # Thesis Versioning
 [Thesis link](https://www.overleaf.com/read/mwzrhwrbmxhb)
 
+## 0.6.0
+`05-08-2023`
+- New acronym: VLAN, UART, HTTPS, VS, REST, CRUD, JSON.
+- [x] Chapter 3: THỰC HIỆN NỀN TẢNG IOT SỬ DỤNG CLOUD GIAO TIẾP PHẦN CỨNG KẾT HỢP KỸ THUẬT MẬT MÃ HÓA NHẸ (16 pages)
+	- [x] Dẫn nhập.
+	- [x] Mô hình (2 pages)
+	- [x] Bo mạch phần cứng (4 pages)
+		[x] ESP32 IoT gateway (4 pages).
+		[x] STM32 device (< 1 pages).
+	- [x] Hệ thống back-end (6 pages)
+		- [x] MQTT Broker (2 pages)
+		- [x] API Server (3 pages)
+			- [x] Tổng quan
+			- [x] Giao tiếp với phần cứng
+			- [x] Giao tiếp với giao diện web
+			- [x] Giao tiếp với database
+		- [x] MongoDB database (1 pages);
+	- [x] Giao diện web (5 pages)
+	
 ## 0.5.0
 `31-07-2023`
 

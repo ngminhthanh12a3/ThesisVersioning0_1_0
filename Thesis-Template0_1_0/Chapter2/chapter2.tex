@@ -75,7 +75,8 @@ Cuối cùng, khi sử dụng mô hình ESP32 web server, người dùng chỉ c
 
 Đây là mô hình hệ thống \acrshort{iot} được áp dụng để giám sát \acrshort{bts}. Tại \acrshort{ptn} DESLab, mô hình này đã có kết quả để chạy và thử nghiệm trong thời gian ngắn hạn tại \acrshort{bts} của các quản trị viên \acrshort{vnpt}. Tuy nhiên, mô hình này vẫn phải đưa ra các khái niệm và kỹ thuật cỗi để có thể phát triển lâu dài. Trong khóa luận tốt nghiệp này, các khái niệm và kỹ thuật cốt lõi cần có, sẽ được trình và xây dựng để hệ thống \acrshort{iot} hiện tại, có thể tiếp tục phát triển. Các khái niệm cỗi lõi bao gồm mô hình-sơ đồ của hệ thống \acrshort{iot}, giao thức frame, cơ chế đồng bộ, cách thức triển khai mật mã hóa, và cách thức triển khai hệ thống back-end và giao diện.
 
-\subsection{Mô hình và sơ đồ của hệ thống \acrshort{iot}}
+\subsection{Mô hình và sơ đồ của hệ thống IoT}
+\label{Model-Diagram-IoT-System}
 
 Mô hình của hệ thống \acrshort{iot} cần được xây dựng, là mô hình \acrshort{iot} 4 lớp (minh họa như hình \ref{fig:IoT-4-Layer-Archi-C2}. Cụ thể, mô hình bao gồm sensing layer, network layer, data processing layer, và application layer.
 
@@ -107,6 +108,7 @@ Data processing layer là lớp chứa các kỹ thuật xử lý dữ liệu. T
 Application layer là lớp cung cấp ứng dụng của hệ thống thông qua các tương tác người dùng. Tại lớp này, hệ thống \acrshort{iot} sẽ cung cấp giao diện web tùy chỉnh cho người dùng. Từ đó, người dùng có thể giám sát và điều khiển dữ liệu của sensing và network layer.
 
 \subsection{Giao thức frame}
+\label{Frame-Protocol-subsec}
 
 \subsubsection{Tổng quan về giao thức frame}
 
@@ -142,6 +144,7 @@ Cấu trúc frame (minh họa như hình \ref{fig:Frame-Structure-Overview}) đ�
 \end{figure}
 
 \subsection{Cơ chế đồng bộ}
+\label{VSync-Mecha}
 
 % Vì sao cần cơ chế đồng bộ
 Cơ chế đồng bộ (minh họa như hình \ref{fig:sync-mechani-overview}) được thiết kế dựa trên các yêu cầu cập nhật database. Với mỗi yêu cầu cập nhật dữ liệu của database, database phải thông báo sự kiện cập nhật tới \acrshort{api} server. Thông qua sự kiện cập nhật từ database, \acrshort{api} server sẽ đồng bộ dữ liệu được cập nhật với bo mạch và giao diện. Giao diện sẽ được đồng bộ trực tiếp qua Internet và thiết bị được đồng bộ gián tiếp qua \acrshort{iot} gateway.
