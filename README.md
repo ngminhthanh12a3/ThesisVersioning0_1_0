@@ -1,6 +1,19 @@
 # Thesis Versioning
 [Thesis link](https://www.overleaf.com/read/mwzrhwrbmxhb)
 
+## 0.7.0
+`09-08-2023`
+- Change Thesis title: THỰC HIỆN NỀN TẢNG IOT SỬ DỤNG **HỆ THỐNG BACK-END** GIAO~TIẾP PHẦN CỨNG QUA WIFI KẾT HỢP KỸ THUẬT MẬT~MÃ~HÓA~NHẸ
+- [x] Chapter 4: KẾT QUẢ (11 pages)
+	- [x] Kết quả phần cứng (4 pages)
+		[x] - Kết quả giao tiếp
+		[x] - Kết quả mật mã hóa
+		[x] - Kết quả đồng bộ.
+	- [x] Kết quả trên VPS (4 pages)
+	- [x] Kết quả giao diện web (3 pages)
+		- [x] Kết nối với API server.
+		- [x] Hiển thị dữ liệu của thiết bị
+		- [x] Cấu hình PWA
 ## 0.6.0
 `05-08-2023`
 - New acronym: VLAN, UART, HTTPS, VS, REST, CRUD, JSON.

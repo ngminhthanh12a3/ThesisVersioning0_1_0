@@ -79,13 +79,13 @@ Hệ thống back-end là tập hợp những ứng dụng server chạy trên \
 Trong hệ thống \acrshort{iot} được đề xuất, \acrshort{mqtt} Broker được xây dựng trên framework NodeJS và ngôn ngữ JavaScript. Trong \acrshort{mqtt} Broker, các \acrshort{mqtt} client là \acrshort{iot} gateway và \acrshort{api} server. Hơn nữa, các dữ liệu publish/subscribe trên \acrshort{mqtt} Broker đều được mã hóa bởi thuật toán ChaCha20-Poly1305.
 
 % Mô hình
-Về tổ chức kết nối, giao thức \acrshort{mqtt} sử dụng các topic để quản lý luồng dữ liệu. Trên hệ thống \acrshort{iot}, các gateway và \acrshort{api} server sẽ được tổ chức kết nối \acrshort{mqtt} thông qua việc publish/subscribe (minh họa như hình \ref{fig:Frame-Parsing-Process}). Trong đó, \acrshort{api} server subscribe vào một topic và các gateway cùng gửi dữ liệu từ phần cứng vào cùng một topic đó. Trong khi, các gateway sẽ subscribe vào một topic riêng biệt và \acrshort{api} server gửi dữ liệu tới phần cứng thông qua từng topic riêng biệt đó. Các topic của gateway được phân biệt thông qua 12-byte gateway ID.
+Về tổ chức kết nối, giao thức \acrshort{mqtt} sử dụng các topic để quản lý luồng dữ liệu. Trên hệ thống \acrshort{iot}, các gateway và \acrshort{api} server sẽ được tổ chức kết nối \acrshort{mqtt} thông qua việc publish/subscribe (minh họa như hình \ref{fig:Frame-Parsing-Process-2}). Trong đó, \acrshort{api} server subscribe vào một topic và các gateway cùng gửi dữ liệu từ phần cứng vào cùng một topic đó. Trong khi, các gateway sẽ subscribe vào một topic riêng biệt và \acrshort{api} server gửi dữ liệu tới phần cứng thông qua từng topic riêng biệt đó. Các topic của gateway được phân biệt thông qua 12-byte gateway ID.
 
 \begin{figure}[htp]
 \centering
 \includegraphics[width=1.0\linewidth]{images/Thesis-Page-11-MQTT-Connect-Establish.pdf}
 \caption{Mô hình Publish/Subscribe MQTT trên hệ thống IoT.}
-\label{fig:Frame-Parsing-Process}
+\label{fig:Frame-Parsing-Process-2}
 \end{figure}
 
 % Tổng quan, kết nối với thiết bị, kết nối với CSDL, và web.
@@ -203,7 +203,7 @@ Trên nền tảng Ant Design Pro, giao diện được trang bị sẵn Main Pa
 \centering
 \includegraphics[width=0.7\linewidth]{images/fig-adp-default-loginpage.png}
 \caption{Login Page trên nền tảng Ant Design Pro.}
-\label{fig:adp-default-mainpage}
+\label{fig:adp-default-loginpage}
 \end{figure}
 
 % Các tương tác thiết lập trên giao diện web
@@ -211,7 +211,7 @@ Dựa trên nền tảng Ant Design Pro, giao diện web thiết lập các tư�
 
 \subsection{Configuration Page}
 
-Configuration Page (minh họa như hình \ref{fig:config-page})hiển thị và cung cấp tương tác cho các cấu hình trên thiết bị phần cứng. Cụ thể, trên trang này, người dùng có thể quan sát, tạo mới, và mở một configuration.
+Configuration Page (minh họa như hình \ref{fig:config-page})hiển thị và cung cấp tương tác cho các cấu hình trên thiết bị phần cứng. Cụ thể, trên trang này, người dùng có thể quan sát, tạo mới, và truy cập một configuration.
 
 \begin{figure}[htp]
 \centering
