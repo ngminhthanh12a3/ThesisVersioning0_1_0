@@ -6,7 +6,7 @@
 % Ngữ cảnh, vấn đề cần giải quyết là gì?
 Các quản trị viên \acrfull{vnpt} yêu cầu xây dựng hệ thống \acrfull{iot} giám sát các \acrfull{bts}. Hệ thống \acrshort{iot} phải cung cấp bo mạch giám sát thông số của các trạm \acrshort{bts}, giao diện người dùng dựa trên cơ sở dữ liệu của \acrfull{vps}, và có sử dụng mật mã hóa.
 
-Trong quá trình phát triển, mô hình hệ thống phần cứng và các cơ chế giao tiếp và đồng bộ trên phần cứng phải được thiết kế. Tại \acrshort{vps}, mô hình hệ thống back-end và nền tảng giao diện người dùng phải được xác định. Bên cạnh đó, hệ thống phải đưa ra loại mật mã hóa được sử dụng. Trong quá trình hoạt động, bo mạch in phải được thiết kế để phù hợp với việc giám thông số của trạm \acrshort{bts} và có thể triển khai cơ chế đồng bộ với \acrshort{iot} cloud. Tại \acrshort{vps}, kỹ thuật triển khai hệ thống back-end và nền tảng giao diện phải được đưa ra. Cuối cùng, hệ thống \acrshort{iot} phải đưa ra cách thức triển khai kỹ thuật mật mã hóa.
+Trong quá trình phát triển, mô hình hệ thống phần cứng và các cơ chế giao tiếp và đồng bộ trên phần cứng phải được thiết kế. Tại \acrshort{vps}, mô hình hệ thống back-end và nền tảng giao diện người dùng phải được xác định. Bên cạnh đó, hệ thống phải đưa ra loại mật mã hóa được sử dụng. Trong quá trình hoạt động, bo mạch in phải được thiết kế để phù hợp với việc giám thông số của trạm \acrshort{bts} và có thể triển khai cơ chế đồng bộ với back-end system. Tại \acrshort{vps}, kỹ thuật triển khai hệ thống back-end và nền tảng giao diện phải được đưa ra. Cuối cùng, hệ thống \acrshort{iot} phải đưa ra cách thức triển khai kỹ thuật mật mã hóa.
 
 % Vì sao vấn đề/bài toán quan trọng và thú vị?
     % Quản trị viên VNPT muốn giám sát BTS online.
@@ -28,7 +28,7 @@ Trong việc giao tiếp, hệ thống phải có cơ chế giao tiếp và đ�
 % Giao diện web linh hoạt có thể tùy chỉnh các thành phần hiển thị.
 % Mật mã hóa được triển khai hợp lý trên cơ sở giao tiếp.
 % Thiết kế hệ thống back-end có cơ sở dữ liệu, API server, và web-server.
-Bo mạch được thiết kế sử dụng \acrfull{mcu} cấu tạo nên các thiết bị và gateway phù hợp với viêc giám sát \acrshort{bts}. Về việc giao tiếp, cơ chế đồng bộ được xây dựng đáng tin cậy và có khả năng tự phục hồi. Hơn nữa, cấu trúc frame giao tiếp được tạo nên có các thành phần nhận diện frame và phát hiện lỗi. Về bảo mật, mật mã hóa được triển khai hợp lý trên cơ sở giao tiếp của hệ thống. Về giao diện, hệ thống cung cấp giao diện web linh hoạt có thể tùy chỉnh các thành phần hiển thị. Về hệ thống back-end, back-end cung cấp cơ sở dữ liệu, \acrshort{api} server, broker server, và web-server.
+Bo mạch hướng tới thiết kế sử dụng \acrfull{mcu} cấu tạo nên các thiết bị và gateway phù hợp với viêc giám sát \acrshort{bts}. Về việc giao tiếp, cơ chế đồng bộ được xây dựng đáng tin cậy và có khả năng tự phục hồi. Hơn nữa, cấu trúc frame giao tiếp được tạo nên có các thành phần nhận diện frame và phát hiện lỗi. Về bảo mật, mật mã hóa được triển khai hợp lý trên cơ sở giao tiếp của hệ thống. Về giao diện, hệ thống cung cấp giao diện web linh hoạt có thể tùy chỉnh các thành phần hiển thị. Về hệ thống back-end, back-end cung cấp cơ sở dữ liệu, \acrshort{api} server, broker server, và web-server.
 
 \section{Giải pháp}
 
@@ -88,6 +88,25 @@ Cuối cùng, cũng trong processing layer, mật mã hóa nhẹ ChaCha20-Poly13
 Kết quả của khóa luận này là những đóng góp trong kỹ thuật giao tiếp-đồng bộ, phát triển và triển khai hệ thống back-end và giao diện web. Trong giao tiếp-đồng bộ, kỹ thuật giao tiếp-đồng bộ đã được triển khai trên thiết bị STM32, gateway ESP32, và \acrshort{api} server. Trong mật mã hóa, kỹ thuật mật mã hóa nhẹ ChaCha20-Poly1305 đã áp dụng trên giao tiếp giữa gateway ESP32 và \acrshort{api} server. Trên hệ thống back-end, \acrshort{mqtt} broker và \acrshort{api} server được phát triển trên nền tảng NodeJS. Hơn nữa, kỹ thuật Docker containerizing được sử dụng để triển khai các thành phần của hệ thống back-end. Cuối cùng, về giao diện, giao diện được phát triển trên nền tảng Ant Design Pro và ngôn ngữ TypeScript, và được triển khai bằng máy chủ web Nginx.
 
 \section{Bố cục}
+
+Báo cáo khóa luận được chia thành 5 chương. Đó là:
+\begin{itemize}
+    \item Chương \ref{Chapter1}: GIỚI THIỆU.
+    \item Chương \ref{Chapter2}: CÁC HỆ THỐNG VÀ CÔNG NGHỆ LIÊN QUAN.
+    \item Chương \ref{Chapter3}: THỰC HIỆN NỀN TẢNG IOT SỬ DỤNG HỆ THỐNG BACK-END GIAO TIẾP PHẦN CỨNG QUA WIFI KẾT HỢP KỸ THUẬT MẬT MÃ HÓA NHẸ.
+    \item Chương \ref{Chapter4}: KẾT QUẢ.
+    \item Chương \ref{Chapter5}: KẾT LUẬN.
+\end{itemize}
+
+Đầu tiên, chương \ref{Chapter1} đưa ra các nội dung tổng quát của khóa luận. Các nội dung bao gồm việc đặt vấn đề, mục tiêu đề ra, giải pháp đề xuất, đóng góp, và bố cục của khóa luận.
+
+Tiếp theo, chương \ref{Chapter2} đưa ra các đánh giá và khảo sát các hệ thống \acrshort{iot} trong việc giải quyết vấn đề của khóa luận. Hơn nữa, chương này còn đưa ra mô hình hệ thống \acrshort{iot} được đề xuất và các lý thuyết xây dựng hệ thống \acrshort{iot} được đưa ra.
+
+Trong việc triển khai hệ thống, chương \ref{Chapter3} trình bày các phương pháp và giải phát đề xuất đề xây dựng hệ thống \acrshort{iot}. Các nội dung này được trình bày các phương pháp và giải pháp trên việc xây dựng mô hình, bo mạch, giao diện web, và hệ thống back-end.
+
+Về các kết quả, chương \ref{Chapter4} đưa ra các kết quả đã đạt được trên phần cứng, \acrshort{vps}, và giao diện web.
+
+Cuối cùng, chương \ref{Chapter5} đưa ra các mô tả ngắn gọn về mục tiêu, phương pháp, kết quả đạt được, ý nghĩa của kết quả cũng như những hạn chế, giới hạn của đề tài và hướng phát triển.
 
 %Tóm tắt luận văn được trình bày nhiều nhất trong 24 trang in trên hai mặt giấy, cỡ chữ Times New Roman 11 của hệ soạn thảo Winword hoặc phần mềm soạn thảo Latex đối với các chuyên ngành thuộc ngành Toán.
 

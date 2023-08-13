@@ -1,2 +1,51 @@
 \chapter{KẾT LUẬN}
 \label{Chapter5}
+
+% Dẫn nhập
+Chương \ref{Chapter5} mô tả ngắn gọn về mục tiêu, phương pháp, kết quả đạt được, ý nghĩa của kết quả cũng như những hạn chế, giới hạn của đề tài và hướng phát triển.
+
+% Mục tiêu: 
+% Thiết kế bo mạch sử dụng vi điều khiển và phù hợp với việc giám sát BTS.
+% Thiết kế cơ chế đồng bộ đáng tin cậy và có khả năng tự phục hồi. Cấu trúc frame có các thành phần nhận diện và phát hiển lỗi.
+% Giao diện web linh hoạt có thể tùy chỉnh các thành phần hiển thị.
+% Mật mã hóa được triển khai hợp lý trên cơ sở giao tiếp.
+% Thiết kế hệ thống back-end có cơ sở dữ liệu, API server, và web-server.
+Hệ thống \acrshort{iot} hướng tới việc sử dụng bo mạch \acrshort{mcu} phù hợp với việc giám sát \acrshort{bts}. Theo đó, cơ chế giao tiếp và đồng bộ được thiết kế để hệ thống back-end và phần cứng tương tác với nhau một cách đáng tin cậy và có khả năng tự phục hồi. Về giao diện, giao diện web linh hoạt sẽ được xây dựng với khả năng tùy chỉnh các thành phần hiển thị. Trên cơ sở giao tiếp, kỹ thuật mật mã hóa nhẹ sẽ được triển khai để đảm bảo tính bảo mật trong các giao tiếp của hệ thống \acrshort{iot}. Cuối cùng, hệ thống back-end sẽ triển khai các ứng dụng server phục vụ cho việc nhận và xử lý dữ liệu phần cứng trên Internet. Các ứng dụng này bao gồm: database, \acrshort{api} server, và web server.
+
+%  Mô tả lại phương pháp
+    % Phần cứng
+    % mô hình back-end
+    % giao diện
+    % giao tiếp và đồng bộ
+    % mã hóa
+Mô hình hệ thống \acrshort{iot} sử dụng mô hình \acrshort{iot} 4 lớp. Trong đó, sensing layer sử dụng \acrshort{mcu} STM32 giao tiếp vạn vật. Trên network layer, hệ thống back-end triển được khai bằng kỹ thuật Docker Containerizing, sử dụng MongoDB database, EggJS \acrshort{api} server, và \acrshort{mqtt} Broker, để giao tiếp với ESP32 \acrshort{iot} gateway.Trên data processing layer, kỹ thuật giao tiếp được triển khai dựa trên giao thức frame trong giao tiếp gateway-\acrshort{api} server, kỹ thuật đồng bộ hoạt động trên sự kiện ``change streams'' của MongoDB, và kỹ thuật mật mã hóa nhẹ ChaCha20-Poly1305 được triển khai trên gói data của giao thức frame. Trên application layer, Nginx web server được sử dụng để cung cấp giao diện web linh hoạt cho người dùng.
+
+% Tóm tắt kết quả đạt được
+    % Phần cứng
+    % VPS
+    % Giao diện
+Trên phần cứng, cơ chế giao tiếp và đồng bộ đã triển khai thành công trên \acrshort{mcu} STM32 và ESP32. Trên \acrshort{vps}, hệ thống back-end đã được triển khai thành công bằng kỹ thuật Docker Containerizing. Trong đó, cơ chế giao tiếp và đồng bộ được cài đặt trên \acrshort{api} server. Về giao diện, giao diện web đã được host thành công trên Nginx web server, có cấu hình \acrshort{pwa}, và giao diện có thể tùy chỉnh. Cuối cùng, mật mã hóa nhẹ ChaCha20-Poly1305 đã được triển khai thanh công trên giao tiếp gateway-\acrshort{api} server.
+
+% Ý nghĩa của kết quả
+    % Cơ chế giao tiếp
+Cơ chế giao tiếp giúp tương tác giữa device-gateway-\acrshort{api} server trở nên đáng tin cậy và có thể tự phục hồi khi phát hiện lỗi.
+    % Cơ chế đồng bộ
+Về việc đồng bộ, cơ chế động bộ giúp thiết bị phần cứng và giao diện web luôn cập nhật được những thay đổi của các \acrshort{vs} trên database.
+    % Mật mã hóa
+Về mật mã hóa, kỹ thuật mật mã hóa nhẹ giúp giao thức giao tiếp có tính bảo mật trong tương tác gateway-\acrshort{api} server.
+    % giao diện linh hoạt
+Cuối cùng, giao diện web linh hoạt giúp người dùng dễ dàng thiết kế và tùy chỉnh các widget trên UI dashboard.
+
+% Những hạn chế, giới hạn của đề tài.
+    % Giao tiếp phần cứng với server
+Trong giao tiếp giữa phần cứng và \acrshort{api} server, giao thức giao tiếp chưa đưa ra nhiều \acrshort{api} tương tác với các \acrshort{vs}. Hơn nữa, giao thức giao tiếp chưa đưa ra các \acrshort{api} giúp người dùng phát sinh các sự kiện trên phần cứng.
+    % API server
+Tiếp theo, trong tương tác giữa back-end và front-end, giao diện web và \acrshort{api} server chưa đưa ra tương tác giúp các quản trị viên thao tác với dữ liệu người dùng.
+    % Widget
+Cuối cùng, giao diện web chưa đưa ra nhiều widget giúp người dùng có thêm lựa chọn trong việc xây dựng các UI dashboard.
+
+% Định hướng phát triển: tương tác phần cứng, quản lý người dùng, widget
+Về định hướng phát triển, nền tảng \acrshort{iot} có thể phát triển các tương tác device-server, tương tác với dữ liệu người dùng, và widget xây dựng giao diện web linh hoạt.
+Đầu tiên, các tương tác device-server có thể phát triển để cung cấp thêm các giao tiếp đọc/ghi những kiểu dữ liệu khác của các \acrshort{vs} (string, enumerate, array,...).
+Tiếp theo, hệ thống có thể cung cấp thêm các \acrshort{api} và tương tác web để các quản trị viên quản lý dữ liệu người dùng.
+Cuối cùng, các widget có thể được tạo mới nhiều hơn để người dùng có thêm nhiều lựa chọn trong việc xây dựng UI dashboard.

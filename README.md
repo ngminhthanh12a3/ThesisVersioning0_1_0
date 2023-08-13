@@ -1,6 +1,25 @@
 # Thesis Versioning
 [Thesis link](https://www.overleaf.com/read/mwzrhwrbmxhb)
 
+## 0.8.0
+`12-08-2023`
+
+- [x] Làm khớp mục tiêu của tóm tắt, chương 1, và chương 5.
+- [x] Làm khớp phương pháp của tóm tắt, chương 1.
+
+- [x] Chapter 5: (2 pages)
+	- [x] Dẫn nhập
+	- [x] Mô tả lại mục tiêu
+	- [x] Mô tả lại phương pháp
+	- [x] Tóm tắt kết quả đạt được
+	- [x] Ý nghĩa của kết quả
+	- [x] Nêu những hạn chế, giới hạn của đề tài.
+	- [x] Hướng phát triển tiếp theo.
+hạn của đề tài
+
+- [x] Mục bố cục - Chương 1.
+- Thay đổi thuật ngữ cloud.
+
 ## 0.7.0
 `09-08-2023`
 - Change Thesis title: THỰC HIỆN NỀN TẢNG IOT SỬ DỤNG **HỆ THỐNG BACK-END** GIAO~TIẾP PHẦN CỨNG QUA WIFI KẾT HỢP KỸ THUẬT MẬT~MÃ~HÓA~NHẸ
