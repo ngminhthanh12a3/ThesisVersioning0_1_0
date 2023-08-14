@@ -8,6 +8,6 @@ Hệ thống \acrshort{iot} sẽ được xây dựng để có bo mạch \acrfu
 % Phương pháp
 Hệ thống sử dụng \acrshort{mcu} STM32 giao tiếp vạn vật, \acrshort{iot} gateway ESP32, giao thức tự thiết kế, và mật mã hóa nhẹ ChaCha20-Poly1305. Trên \acrshort{vps}, hệ thống vận hành các ứng dụng server: \acrfull{api} server, \acrfull{mqtt} Broker và cơ sở dữ liệu MongoDB; và máy chủ web cung cấp giao diện người dùng. 
 % Kết quả
-Trên hệ thống vạn vật, \acrshort{mcu} STM32 đã có cơ chế giao tiếp và đồng bộ dữ liệu với back-end system, gateway ESP32 có cơ chế chuyển tiếp dữ liệu. Trên \acrshort{vps}, các ứng dụng server được triển khai bằng kỹ thuật Docker Containerizing, máy chủ web Nginx quản lý và cung cấp giao diện web, và mã hóa nhẹ được sử dụng giữa giao tiếp gateway-\acrshort{api} server. 
+Trên hệ thống vạn vật, \acrshort{mcu} STM32 đã có cơ chế giao tiếp và đồng bộ dữ liệu với back-end system, và gateway ESP32 có cơ chế chuyển tiếp dữ liệu. Trên \acrshort{vps}, các ứng dụng server được triển khai bằng kỹ thuật Docker Containerizing, máy chủ web Nginx quản lý và cung cấp giao diện web, và mã hóa nhẹ được sử dụng giữa giao tiếp gateway-\acrshort{api} server. 
 % Kết luận
 Hệ thống \acrshort{iot} đưa ra có mô hình phù hợp với cơ chế giao tiếp và đồng bộ giữa thiết bị, gateway, và back-end system, giao diện web có sự linh hoạt trong việc tạo và hiển thị các widget. Về việc giao tiếp, thuật toán mã hóa nhẹ đảm bảo việc bảo mật dữ liệu giữa gateway và back-end system và giao thức có cấu trúc linh hoạt trong việc nhận diện và phát hiện lỗi.

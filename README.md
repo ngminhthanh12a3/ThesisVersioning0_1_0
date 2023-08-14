@@ -1,6 +1,25 @@
 # Thesis Versioning
 [Thesis link](https://www.overleaf.com/read/mwzrhwrbmxhb)
 
+## 0.10.0
+`14-08-2023`
+
+- Chỉnh sửa theo bản cứng (lần 1).
+	- [x] Tóm tắt (iii)
+	- [x] Chapter 1:
+		- [x] Đặt vấn đề (1)
+		- [x] Mục tiêu (1, 2)
+		- [x] Giải pháp (2,3,4)
+		- [x] Bố cục (5)
+	- [x] Chương 2
+		- [x] 2.4 Mô hình hệ thống IoT sử dụng bo mạch của PTN DESLab giao tiếp với VPS (9)
+	- [x] Chương 3:
+		- [x] 3.2 Bo mạch phần cứng (23, 24)
+		- [x] 3.3 Hệ thống back-end (30)
+		- [x] 3.4 Giao diện web (32, 36)
+	- [x] Chương 4:
+		- [x] 4.1 Kết quả trên phần cứng (37)
+		- [x] 4.2 Kết quả trên VPS(42, 43)
 ## 0.9.0
 `13-08-2023`
 - Check lỗi chính tả bản mềm (lần 1).
