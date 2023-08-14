@@ -15,7 +15,7 @@ Trên \acrshort{vps}, hệ thống \acrshort{iot} triển khai hệ thống back
 
 Trên hệ thống \acrshort{iot}, hệ thống có 3 kỹ thuật xử lý dữ liệu. Đó là giao thức frame, mật mã hóa nhẹ ChaCha20-Poly1305, và đồng bộ. Trong đó, giao thức frame được triển khai trên thiết bị STM32, ESP32 gateway, và \acrshort{api} server. Tiếp theo, mật mã hóa ChaCha20-Poly1305 được sử dụng trên ESP32 gateway và \acrshort{api} server. Cuối cùng, cơ chế đồng bộ được triển khai trên \acrshort{api} server, giao diện web, và thiết bị STM32.
 
-Về các giao thức truyền, hệ thống sử dụng giao thức có dây \acrfull{uart}; các giao thức không dây: \acrshort{mqtt}, \acrfull{https}, và Websocket; và \acrshort{vlan}. Trong đó, \acrshort{uart} được sử dụng trong giao tiếp gateway-device; \acrshort{mqtt} được sử dụng trong giao tiếp gateway-\acrshort{mqtt} Broker và \acrshort{mqtt} Broker-\acrshort{api} server; \acrshort{https} và Websocket được sử dụng trong giao tiếp \acrshort{api} server-web; và \acrshort{vlan} được sử dụng trong giao tiếp \acrshort{api}~server-database.
+Về các giao thức truyền, hệ thống sử dụng giao thức có dây \acrfull{uart}; các giao thức không dây: \acrshort{mqtt}, \acrfull{https}, và Websocket; và \acrfull{vlan}. Trong đó, \acrshort{uart} được sử dụng trong giao tiếp gateway-device; \acrshort{mqtt} được sử dụng trong giao tiếp gateway-\acrshort{mqtt} Broker và \acrshort{mqtt} Broker-\acrshort{api} server; \acrshort{https} và Websocket được sử dụng trong giao tiếp \acrshort{api} server-web; và \acrshort{vlan} được sử dụng trong giao tiếp \acrshort{api}~server-database.
 
 \begin{figure}[htp]
 \centering
@@ -66,7 +66,7 @@ Về quá trình phân giải và xử lý frame, quá trình này diễn ra đ�
 
 \acrshort{mcu} STM32 được phát triển trên công cụ STM32CubeIDE và sử dụng ngôn ngữ C. STM32 được phát triển như một thiết bị vật lý trong mô hình \acrshort{iot}. Cụ thể, \acrshort{mcu} STM32 có nhiệm vụ tương tác với các cảm biến và ngoại vi cũng như đồng bộ dữ liệu với \acrshort{api} server.
 
-STM32 thực hiện đệm dữ liệu, xử lý và phân giải frame như ESP32 gateway (được đề cập trong mục \ref{ESP32-IoT-gateway}). Ngoài ra, STM32 có thể đọc và thay đổi cơ sở dữ liệu trên \acrshort{vps} thông qua các \acrshort{api}. Các \acrshort{api} này giúp STM32 gửi yêu cầu đọc ghi dữ liệu và đồng bộ với cơ sở dữ liệu. Các \acrshort{api} này bao gồm \acrshort{api} đọc dữ liệu của \acrfull{vs}; và ghi dữ liệu \acrshort{vs} theo kiểu Integer và Float.
+STM32 thực hiện đệm dữ liệu, xử lý và phân giải frame như ESP32 gateway (được đề cập trong mục \ref{ESP32-IoT-gateway}). Ngoài ra, STM32 có thể đọc và thay đổi cơ sở dữ liệu trên \acrshort{vps} thông qua các \acrshort{api}. Các \acrshort{api} này giúp STM32 gửi yêu cầu đọc ghi dữ liệu và đồng bộ với cơ sở dữ liệu. Các \acrshort{api} này bao gồm \acrshort{api} đọc dữ liệu của \acrshort{vs}; và ghi dữ liệu \acrshort{vs} theo kiểu Integer và Float.
 
 \section{Hệ thống back-end}
 
@@ -170,7 +170,7 @@ Trong vai trò Websocket server, \acrshort{api} server đồng bộ (đề cập
 
 \subsection{MongoDB}
 
-MongoDB là một hệ quản trị cơ sở dữ liệu miễn phí va mã nguồn mở đa nền tảng. Được phân loại như một hệ quản trị cơ sở dữ liệu NoSQL, MongoDB sử dụng các \acrshort{json}-like document với schema~\cite{MongoDB-Def}. Trên \acrshort{vps}, MongoDB hoạt động như một ứng dụng server. Cụ thể, ứng này được cài đặt bằng ``mongo Docker Image'' trên \textbf{docker-compose} và hoạt động trên cùng một VLAN với \acrshort{api} server và \acrshort{mqtt} Broker.
+MongoDB là một hệ quản trị cơ sở dữ liệu miễn phí và mã nguồn mở đa nền tảng. Được phân loại như một hệ quản trị cơ sở dữ liệu NoSQL, MongoDB sử dụng các \acrshort{json}-like document với schema~\cite{MongoDB-Def}. Trên \acrshort{vps}, MongoDB hoạt động như một ứng dụng server. Cụ thể, ứng này được cài đặt bằng ``mongo Docker Image'' trên \textbf{docker-compose} và hoạt động trên cùng một \acrshort{vlan} với \acrshort{api} server và \acrshort{mqtt} Broker.
 
 % connect and change streams
 MongoDB thiết lập kết nối với \acrshort{api} server thông qua thư viện ``MongooseJS'' và cung cấp giải pháp cho việc đồng bộ với phần cứng và giao diện web. Cụ thể, MongoDB cung cấp giải pháp đồng bộ thông qua sự kiện ``change streams''. Sự kiện này giúp ứng dụng server theo dõi các thay đổi dữ liệu thời gian thực một cách dễ dàng. ``Change streams'' hoạt động trên ``Replica set'' của MongoDB.
@@ -181,7 +181,7 @@ Trên \acrshort{vps}, Mongo được triển khai trên mô hình ``Replica set'
 \begin{figure}[htp]
 \centering
 \includegraphics[width=0.7\linewidth]{images/replica-set-read-write-operations-primary.bakedsvg.png}
-\caption{Mô hình MongoDB Replica Set trên VPS.}
+\caption{Mô hình MongoDB Replica Set trên VPS. Nguồn từ MongoDB~\cite{Mongo-Replication-Def}.}
 \label{fig:MongoDB-Replication-Model}
 \end{figure}
 
@@ -241,7 +241,7 @@ Trên tab Virtual Storage, Virtual Storage Tab (minh họa như hình \ref{fig:c
 \label{fig:config-vstorage-tab}
 \end{figure}
 
-Trên tab UI, UI Tab (minh họa như hình \ref{fig:config-ui-tab}) hiển thị danh sách các Dashboard tab và người dùng có thể tạo mới hoặc xóa dữ liệu của một Dashboard thông qua ``+'' hoặc ``X'' button tương ứng. Trên mỗi Dashboard, người dùng có thể bật chế độ chỉnh (minh họa như hình \ref{fig:config-ui-tab-edit-mode}) sửa thông qua \textbf{Edit} button. Trên chế độ này, người dùng có thể thêm, xóa, hoặc chỉnh sửa các widget có sẵn để thiết kế Dashboard.
+Trên tab UI, UI Tab (minh họa như hình \ref{fig:config-ui-tab}) hiển thị danh sách các Dashboard tab và người dùng có thể tạo mới hoặc xóa dữ liệu của một Dashboard thông qua ``+'' hoặc ``X'' button tương ứng. Trên mỗi Dashboard, người dùng có thể bật chế độ chỉnh sửa (minh họa như hình \ref{fig:config-ui-tab-edit-mode}) thông qua \textbf{Edit} button. Trên chế độ này, người dùng có thể thêm, xóa, hoặc chỉnh sửa các widget có sẵn để thiết kế Dashboard.
 
 \begin{figure}[htp]
 \centering

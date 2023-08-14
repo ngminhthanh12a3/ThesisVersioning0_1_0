@@ -18,7 +18,7 @@ Hệ thống \acrshort{iot} hướng tới việc sử dụng bo mạch \acrshor
     % giao diện
     % giao tiếp và đồng bộ
     % mã hóa
-Mô hình hệ thống \acrshort{iot} sử dụng mô hình \acrshort{iot} 4 lớp. Trong đó, sensing layer sử dụng \acrshort{mcu} STM32 giao tiếp vạn vật. Trên network layer, hệ thống back-end triển được khai bằng kỹ thuật Docker Containerizing, sử dụng MongoDB database, EggJS \acrshort{api} server, và \acrshort{mqtt} Broker, để giao tiếp với ESP32 \acrshort{iot} gateway.Trên data processing layer, kỹ thuật giao tiếp được triển khai dựa trên giao thức frame trong giao tiếp gateway-\acrshort{api} server, kỹ thuật đồng bộ hoạt động trên sự kiện ``change streams'' của MongoDB, và kỹ thuật mật mã hóa nhẹ ChaCha20-Poly1305 được triển khai trên gói data của giao thức frame. Trên application layer, Nginx web server được sử dụng để cung cấp giao diện web linh hoạt cho người dùng.
+Mô hình hệ thống \acrshort{iot} sử dụng mô hình \acrshort{iot} 4 lớp. Trong đó, sensing layer sử dụng \acrshort{mcu} STM32 giao tiếp vạn vật. Trên network layer, hệ thống back-end triển được khai bằng kỹ thuật Docker Containerizing, sử dụng MongoDB database, EggJS \acrshort{api} server, và \acrshort{mqtt} Broker, để giao tiếp với ESP32 \acrshort{iot} gateway. Trên data processing layer, kỹ thuật giao tiếp được triển khai dựa trên giao thức frame trong giao tiếp gateway-\acrshort{api} server, kỹ thuật đồng bộ hoạt động trên sự kiện ``change streams'' của MongoDB, và kỹ thuật mật mã hóa nhẹ ChaCha20-Poly1305 được triển khai trên gói data của giao thức frame. Trên application layer, Nginx web server được sử dụng để cung cấp giao diện web linh hoạt cho người dùng.
 
 % Tóm tắt kết quả đạt được
     % Phần cứng

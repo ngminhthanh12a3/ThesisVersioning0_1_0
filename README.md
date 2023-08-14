@@ -1,6 +1,34 @@
 # Thesis Versioning
 [Thesis link](https://www.overleaf.com/read/mwzrhwrbmxhb)
 
+## 0.9.0
+`13-08-2023`
+- Check lỗi chính tả bản mềm (lần 1).
+	- [x] Bìa
+	- [x] Lời cảm ơn
+	- [x] Abstract
+	- [x] Tóm tắt
+	- [x] Chapter 1
+		- [x] Đặt vấn đề
+		- [x] Mục tiêu
+		- [x] Giải pháp (15)
+		- [x] Đóng góp
+		- [x] Bố cục (18)
+	- [x] Chương 2
+		[x] Hệ thống IoT sử dụng nền tảng Blynk (19)
+		[x] Hệ thống IoT sử dụng ThingsBoard
+		[x] Các hệ thống IoT đơn giản sử dụng ESP32 web server chế độ Access Point
+		[x] Mô hình hệ thống IoT sử dụng bo mạch của PTN DESLab giao tiếp với VPS (22, 24, 25(3), 29, 32(2))
+	- [x] CHƯƠNG 3:
+		[x] Mô hình hệ thống IoT
+		[x] Bo mạch phần cứng
+		[x] Hệ thống back-end (43(2), 44)
+		[x] Giao diện web (47)
+	- [x] Chương 4
+		- [x] Kết quả trên phần cứng (51(2))
+		- [x] Kết quả trên VPS (53(3), 55(2), 57)
+		- [x] Kết quả giao diện web
+	- [x] Chương 5 (62)
 ## 0.8.0
 `12-08-2023`
 

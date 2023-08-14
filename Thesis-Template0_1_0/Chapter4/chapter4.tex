@@ -28,7 +28,7 @@ Kỹ thuật giao tiếp được cài đặt như nhau trên \acrshort{mcu} STM
 
 \subsection{Kỹ thuật mật mã hóa}
 % Minh họa quá trình thiết lập key CC20, onetime key Poly1305
-Kỹ thuật mật mã hóa sử dụng thuật toán \acrshort{aead} ChaCha20-Poly1305 được triển khai thành công trên \acrshort{mcu} ESP32. Theo kiến trúc của thuật toán \acrshort{aead}, quá trình mã hóa (minh họa như hình \ref{fig:CC20-P1305-En-Process}) đã diễn ra đúng đắn và tuần tự theo các quá trình của RFC7539~\cite{rfc7539}:
+Kỹ thuật mật mã hóa sử dụng thuật toán \acrshort{aead} ChaCha20-Poly1305 được triển khai thành công trên \acrshort{mcu} ESP32. Theo kiến trúc của thuật toán \acrshort{aead}, quá trình mã hóa (minh họa như hình \ref{fig:CC20-P1305-En-Process}) đã diễn ra đúng đắn và tuần tự theo các quá trình của RFC 7539~\cite{rfc7539}:
 
 \begin{enumerate}
     \item Thiết lập State cho Poly1305 one-time key.
@@ -37,7 +37,7 @@ Kỹ thuật mật mã hóa sử dụng thuật toán \acrshort{aead} ChaCha20-P
     \item Thực thi Poly1305 function cho ciphertext.
 \end{enumerate}
 
-Và quá trình giải mã (minh họa như hình \ref{fig:CC20-P1305-De-Process}) đã diễn ra đúng đắn và tuần tự theo các quá trình của RFC7539~\cite{rfc7539}:
+Và quá trình giải mã (minh họa như hình \ref{fig:CC20-P1305-De-Process}) đã diễn ra đúng đắn và tuần tự theo các quá trình của RFC 7539~\cite{rfc7539}:
 
 \begin{enumerate}
     \item Thiết lập State cho Poly1305 one-time key.
@@ -71,15 +71,15 @@ Kỹ thuật đồng bộ được triển khai thành công trên firmware củ
 
 \section{Kết quả trên VPS}
 
-Trên \acrshort{vps}, các kết quả được minh họa bao gồm kết quả của kỹ thuật Docker Containerizing, Nginx web server, \acrshort{mqtt} Broker, MongoDB server, và các kết quả của giao tiếp và đồng bộ trên \acrshort{api} server.
+Trên \acrshort{vps}, các kết quả được minh họa bao gồm kết quả của kỹ thuật Docker Containerizing, Nginx web server, và các kết quả của giao tiếp và đồng bộ trên \acrshort{api} server.
 
 \subsection{Kết quả của kỹ thuật Docker Containerizing}
 
-Hệ thống back-end bao gồm \acrshort{mqtt} Broker, \acrshort{api} server, và MongoDB database, đã được triển khai thành công trên \acrshort{vps} thông qua kỹ thuật Docker Containerizing. Cụ thể, commandline của \acrshort{vps} khi chạy lệnh ``docker ps'' (minh họa như hình \ref{fig:docker-ps-vps}) hiển thị lần lượt các container của \acrshort{api} server, 3 replica set của MongoDB, và \acrshort{mqtt} Broker. Trong đó:
+Hệ thống back-end bao gồm \acrshort{mqtt} Broker, \acrshort{api} server, và MongoDB database, đã được triển khai thành công trên \acrshort{vps} thông qua kỹ thuật Docker Containerizing. Cụ thể, commandline của \acrshort{vps} khi chạy lệnh ``docker ps'' (minh họa như hình \ref{fig:docker-ps-vps}) hiển thị lần lượt các container của \acrshort{api} server, replica set của MongoDB, và \acrshort{mqtt} Broker. Trong đó:
 
 \begin{itemize}
     \item \acrshort{api} server chạy trên container \textbf{desiot-server-desiot-server-1} và hoạt động ở port 7001.
-    \item Các replica set của MongoDB chạy trên các container \textbf{mongo1}, \textbf{mongo2}, và \textbf{mongo3} cũng như hoạt động ở các port $30001\rightarrow 30003$.
+    \item Replica set của MongoDB chạy trên các container \textbf{mongo1}, \textbf{mongo2}, và \textbf{mongo3} cũng như hoạt động ở các port $30001\rightarrow 30003$.
     \item \acrshort{mqtt} Broker chạy trên container \textbf{iot-services-broker-1} và hoạt động ở port 1883.
 \end{itemize}
 
@@ -126,7 +126,7 @@ Trên \acrshort{api} server, quá trình phân giải và xử lý frame diễn 
 \subsection{Kết quả kỹ thuật mật mã hóa trên API server}
 
 % Minh họa quá trình thiết lập key CC20, onetime key Poly1305
-Kỹ thuật mật mã hóa sử dụng thuật toán \acrshort{aead} ChaCha20-Poly1305 được triển khai thành công trên \acrshort{api} server. Theo kiến trúc của thuật toán \acrshort{aead}, quá trình mã hóa (minh họa như hình \ref{fig:CC20-P1305-En-Process-server}) đã diễn ra đúng đắn và tuần tự theo các quá trình của RFC7539~\cite{rfc7539}:
+Kỹ thuật mật mã hóa sử dụng thuật toán \acrshort{aead} ChaCha20-Poly1305 được triển khai thành công trên \acrshort{api} server. Theo kiến trúc của thuật toán \acrshort{aead}, quá trình mã hóa (minh họa như hình \ref{fig:CC20-P1305-En-Process-server}) đã diễn ra đúng đắn và tuần tự theo các quá trình của RFC 7539~\cite{rfc7539}:
 
 \begin{enumerate}
     \item Thiết lập State cho Poly1305 one-time key.
@@ -135,7 +135,7 @@ Kỹ thuật mật mã hóa sử dụng thuật toán \acrshort{aead} ChaCha20-P
     \item Thực thi Poly1305 function cho ciphertext.
 \end{enumerate}
 
-Và quá trình giải mã (minh họa như hình \ref{fig:CC20-P1305-De-Process-server}) đã diễn ra đúng đắn và tuần tự theo các quá trình của RFC7539~\cite{rfc7539}:
+Và quá trình giải mã (minh họa như hình \ref{fig:CC20-P1305-De-Process-server}) đã diễn ra đúng đắn và tuần tự theo các quá trình của RFC 7539~\cite{rfc7539}:
 
 \begin{enumerate}
     \item Thiết lập State cho Poly1305 one-time key.

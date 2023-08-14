@@ -5,7 +5,7 @@
 
 \subsection{Tổng quan về Blynk}
 
-Blynk là một trong những nền tảng \acrshort{iot} được sử dụng nhiều nhất hiện nay. Nền tảng này cung cấp bộ ứng dụng toàn diện cho các hệ thống \acrshort{iot} của cá nhân, người dùng, và doanh nghiệp. Trên nền nảng này, bộ ứng dụng toàn diện của Blynk cho phép tạo mấu (prototyping), phát triển, và quản lý từ xa các thiết bị điện tử được kết nối của tất cả phạm vi (scale)~\cite{Blynk-Overview}.
+Blynk là một trong những nền tảng \acrshort{iot} được sử dụng nhiều nhất hiện nay. Nền tảng này cung cấp bộ ứng dụng toàn diện cho các hệ thống \acrshort{iot} của cá nhân, người dùng, và doanh nghiệp. Trên nền nảng này, bộ ứng dụng toàn diện của Blynk cho phép tạo mẫu (prototyping), phát triển, và quản lý từ xa các thiết bị điện tử được kết nối của tất cả phạm vi (scale)~\cite{Blynk-Overview}.
 
 \subsection{Những vấn đề có thể giải quyết thông qua nền tảng Blynk}
 
@@ -73,7 +73,7 @@ Cuối cùng, khi sử dụng mô hình ESP32 web server, người dùng chỉ c
 % viết về mô hình hệ thống iot sử dụng bo mạch phần cứng của PTN DESLab và máy chủ ảo
 \section{Mô hình hệ thống IoT sử dụng bo mạch của PTN DESLab giao tiếp với VPS}
 
-Đây là mô hình hệ thống \acrshort{iot} được áp dụng để giám sát \acrshort{bts}. Tại \acrshort{ptn} DESLab, mô hình này đã có kết quả để chạy và thử nghiệm trong thời gian ngắn hạn tại \acrshort{bts} của các quản trị viên \acrshort{vnpt}. Tuy nhiên, mô hình này vẫn phải đưa ra các khái niệm và kỹ thuật cỗi để có thể phát triển lâu dài. Trong khóa luận tốt nghiệp này, các khái niệm và kỹ thuật cốt lõi cần có, sẽ được trình và xây dựng để hệ thống \acrshort{iot} hiện tại, có thể tiếp tục phát triển. Các khái niệm cỗi lõi bao gồm mô hình-sơ đồ của hệ thống \acrshort{iot}, giao thức frame, cơ chế đồng bộ, cách thức triển khai mật mã hóa, và cách thức triển khai hệ thống back-end và giao diện.
+Đây là mô hình hệ thống \acrshort{iot} được áp dụng để giám sát \acrshort{bts}. Tại \acrshort{ptn} DESLab, mô hình này đã có kết quả để chạy và thử nghiệm trong thời gian ngắn hạn tại \acrshort{bts} của các quản trị viên \acrshort{vnpt}. Tuy nhiên, mô hình này vẫn phải đưa ra các khái niệm và kỹ thuật cỗi để có thể phát triển lâu dài. Trong khóa luận tốt nghiệp này, các khái niệm và kỹ thuật cốt lõi cần có, sẽ được trình bày và xây dựng để hệ thống \acrshort{iot} hiện tại, có thể tiếp tục phát triển. Các khái niệm cỗi lõi bao gồm mô hình-sơ đồ của hệ thống \acrshort{iot}, giao thức frame, cơ chế đồng bộ, cách thức triển khai mật mã hóa, và cách thức triển khai hệ thống back-end và giao diện.
 
 \subsection{Mô hình và sơ đồ của hệ thống IoT}
 \label{Model-Diagram-IoT-System}
@@ -115,7 +115,7 @@ Application layer là lớp cung cấp ứng dụng của hệ thống thông qu
 Giao thức frame được định nghĩa để tạo ra cấu trúc frame trong giao tiếp device-gateway. Cấu trúc frame này là duy nhất và khác biết với các hệ thống khác. Điều này giúp việc giao tiếp trên bo mạch dễ triển khai và có tính bảo mật.
 
 % Tại sao sử dụng gia thức frame
-Trên bo mạch, giao thức frame giúp giao tiếp device-gateway có tính bảo mật và đáng tin cậy. Đầu tiên, hệ thống sẽ có cấu trúc frame duy nhất, riêng tư, và bảo mật. Vì vậy, cấu trúc frame này không thể phân giải trên các hệ thống khác. Tiếp theo, vì giao tiếp device-gateway có thể bị lỗi do nhiễu trên bo mạch, nên cấu trúc frame cung cấp các byte CRC để phát hiện lỗi khi giao tiếp diễn ra. Điều này đảm bảo hệ thống vẫn hoạt động khi gặp lỗi trong giao tiếp device-gateway.
+Trên bo mạch, giao thức frame giúp giao tiếp device-gateway có tính bảo mật và đáng tin cậy. Đầu tiên, hệ thống sẽ có cấu trúc frame duy nhất, riêng tư, và bảo mật. Vì vậy, cấu trúc frame này không thể phân giải trên các hệ thống khác. Tiếp theo, vì giao tiếp device-gateway có thể bị lỗi do nhiễu trên bo mạch, nên cấu trúc frame cung cấp các byte CRC để phát hiện lỗi khi giao tiếp diễn ra. Điều này đảm bảo hệ thống vẫn hoạt động khi phát sinh lỗi trong giao tiếp device-gateway.
 
 % Cấu trúc frame
 \subsubsection{Cấu trúc frame}
@@ -134,7 +134,7 @@ Cấu trúc frame (minh họa như hình \ref{fig:Frame-Structure-Overview}) đ�
 
 % Kỹ thuật phân giải frame
 
-Để phân giải frame, kỹ thuật phân giải frame (minh họa như hình \ref{fig:frame-parsing-tech}) được triển khai trên giao tiếp UART của \acrshort{mcu} STM32 và gateway ESP32. Với mỗi byte nhận được, chỉ số của frame sẽ được kiểm tra. Với mỗi chỉ số frame, frame sẽ được kiểm tra header, trailer, CRC, hoặc thu thập các dữ liệu phần body. Cuối cùng, quá trình phần giải thành công khi việc tính toán CRC thành công và quá trình thất bại khi việc kiểm tra header, trailer, và CRC thất bại; hoặc timeout.
+Để phân giải frame, kỹ thuật phân giải frame (minh họa như hình \ref{fig:frame-parsing-tech}) được triển khai trên giao tiếp UART của \acrshort{mcu} STM32 và gateway ESP32. Với mỗi byte nhận được, chỉ số của frame sẽ được kiểm tra. Với mỗi chỉ số frame, frame sẽ được kiểm tra header, trailer, CRC, hoặc thu thập các dữ liệu phần body. Cuối cùng, quá trình phần giải thành công khi việc kiểm tra các header, trailer và tính toán CRC thành công và quá trình thất bại khi việc kiểm tra header, trailer, và CRC thất bại; hoặc timeout.
 
 \begin{figure}[htp]
 \centering
@@ -149,6 +149,8 @@ Cấu trúc frame (minh họa như hình \ref{fig:Frame-Structure-Overview}) đ�
 % Vì sao cần cơ chế đồng bộ
 Cơ chế đồng bộ (minh họa như hình \ref{fig:sync-mechani-overview}) được thiết kế dựa trên các yêu cầu cập nhật database. Với mỗi yêu cầu cập nhật dữ liệu của database, database phải thông báo sự kiện cập nhật tới \acrshort{api} server. Thông qua sự kiện cập nhật từ database, \acrshort{api} server sẽ đồng bộ dữ liệu được cập nhật với bo mạch và giao diện. Giao diện sẽ được đồng bộ trực tiếp qua Internet và thiết bị được đồng bộ gián tiếp qua \acrshort{iot} gateway.
 
+Trên hệ thống hiện tại, model của các \acrfull{vs} sẽ được đồng bộ khi có sự thay đổi dữ liệu của model này trên database. Khi có sự thay đổi dữ liệu model của \acrshort{vs}, dữ liệu model của \acrshort{vs} sẽ được đồng bộ tới thiết bị và giao diện thông qua cách thức hoạt động của cơ chế đồng bộ được đề cập.
+
 \begin{figure}[htp]
 \centering
 \includegraphics[width=1.0\linewidth]{images/Thesis-Page-6-sync-mecha.pdf}
@@ -162,7 +164,7 @@ Cơ chế đồng bộ (minh họa như hình \ref{fig:sync-mechani-overview}) �
 Trong các hệ thống \acrshort{iot}, cấu hình của các thiết bị luôn có thể thay đổi. Vì vậy, giao diện hiển thị cũng phải có tính linh hoạt và có thể tùy chỉnh để đáp ứng các thay đổi đó. Như vậy, giao diện có thể thay đổi tương ứng với cấu hình của các thiết bị. Hơn nữa, đối với người dùng, người dùng có thể dễ dàng thay đổi giao diện trong khi họ không cần phải lập trình.
 
 % Cơ sở cho việc lập trình giao diện web linh hoạt
-Giao diện web linh hoạt của hệ thống được phát triển trên framework ReactJS. Dựa trên framework này, thư viện ``React-Grid-Layout'' sẽ được sử dụng để phát triển giao diện linh hoạt. Khi sử dụng thu viện này, một hệ thống layout dạng lưới (minh họa như hình \ref{fig:RGL-overview}) sẽ được tạo ra. Trên mạng lưới đó, người dùng có thể kéo thả và thay đổi kích thước của các widget.
+Giao diện web linh hoạt của hệ thống được phát triển trên framework ReactJS. Dựa trên framework này, thư viện ``React-Grid-Layout'' sẽ được sử dụng để phát triển giao diện linh hoạt. Khi sử dụng thư viện này, một hệ thống layout dạng lưới (minh họa như hình \ref{fig:RGL-overview}) sẽ được tạo ra. Trên mạng lưới đó, người dùng có thể kéo thả và thay đổi kích thước của các widget.
 
 \begin{figure}[htp]
 \centering
@@ -226,7 +228,7 @@ Về việc khởi tạo ChaCha State, ChaCha State được khởi tạo bằng
     \item 4 word đầu tiên (từ vị trí 0$\rightarrow$3) là các constant: 0x61707865, 0x3320646e, 0x79622d32, 0x6b206574.
     \item 8 word tiếp theo (từ vị trí 4$\rightarrow$11) được trích xuất từ 256-bit key bằng việc đọc các byte theo trật tự little-endian, đọc theo từng khối, mỗi khối là 1 word.
     \item Word thứ 12 là block counter. Vì mỗi ChaCha Block có độ dài 64 byte, một word 32-bit đủ cho 256 gigabytes dữ liệu. % 2^32 (bit) / 64(byte) = 256 ggByte
-    \item Các word thứ 13$\rightarrow$15 là nonce, cùng một key thì không nên lặp lại nonce. Word thứ 13 là 32 bit đầu tiên của đầu vào nonce như một só nguyên little-endian, trong khi đó, word thứ 15 là 32 bit còn lại.
+    \item Các word thứ 13$\rightarrow$15 là nonce, cùng một key thì không nên lặp lại nonce. Word thứ 13 là 32 bit đầu tiên của đầu vào nonce như một số nguyên little-endian, trong khi đó, word thứ 15 là 32 bit còn lại.
 \end{itemize}
 
 \begin{table}[ht]
@@ -312,12 +314,12 @@ Sau đó, chia message thành các khối 16-byte. Khối cuối cùng có thể
     \item Thiết lập ``accumulator'' bằng phép chia modulo cho ``P''. \\Tóm lại: $accumumator = ((accumulator+block)*r) \% P$.
 \end{itemize}
 
-Cuối cùng, giá trị của secret key (``s'') được cộng vào ``accumulator,  và 128 least significant bit được tuần tự hóa theo trật tự little-endian.
+Cuối cùng, giá trị của secret key (``s'') được cộng vào ``accumulator'',  và 128 least significant bit được tuần tự hóa theo trật tự little-endian.
 
 \subsubsection{Tạo Poly1305 key sử dụng ChaCha20}
 \label{CreatePoly1305UsingChaCha20}
 
-Như đã đề cập ở mục \ref{Poly1305Algorithm}, có thể chập nhận việc tạo one-time key cho Poly1305 một cách giả ngẫu nhiên (pseudorandomly). Ở mục này, phương pháp được đề xuất là tạo one-time key cho Poly1305 sử dụng ChaCha20.
+Như đã đề cập ở mục \ref{Poly1305Algorithm}, có thể chấp nhận việc tạo one-time key cho Poly1305 một cách giả ngẫu nhiên (pseudorandomly). Ở mục này, phương pháp được đề xuất là tạo one-time key cho Poly1305 sử dụng ChaCha20.
 
 Để tạo cặp key (r,s), chúng ta sử dụng ChaCha20 Block Function. Phương pháp được đề xuất là gọi ChaCha20 Block Function với các tham số đầu vào như sau:
 

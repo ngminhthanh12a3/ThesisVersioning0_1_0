@@ -52,7 +52,7 @@ Mô hình của hệ thống được thiết kế theo mô hình IoT 4 lớp (m
     % giao diện
     % giao tiếp và đồng bộ
     % mã hóa
-Cụ thể, tại perception layer, phần cứng của hệ thống là bo mạch của \acrfull{ptn} DESLab và sử dụng \acrshort{mcu} ESP32 và STM32 và các cảm biến đo nhiệt độ, dòng điện, điện thể, và contactor. Trong đó, STM32 là thiết bị giao tiếp vạn vật và ESP32 là \acrshort{iot} gateway.
+Cụ thể, tại perception layer, phần cứng của hệ thống là bo mạch của \acrfull{ptn} DESLab và sử dụng \acrshort{mcu} ESP32 và STM32 và các cảm biến đo nhiệt độ, dòng điện, điện thế, và contactor. Trong đó, STM32 là thiết bị giao tiếp vạn vật và ESP32 là \acrshort{iot} gateway.
 % 
 Tại \acrshort{vps} (network layer), hệ thống back-end là tập hợp của \acrfull{mqtt} Broker, MongoDB database, và EggJS server, và back-end được triển khai bằng kỹ thuật Docker Containerizing. Tại application layer, Nginx web-server được triển khai để cung cấp giao diện web trực quan hóa dữ liệu thiết bị cho người dùng.
 %
@@ -93,7 +93,7 @@ Báo cáo khóa luận được chia thành 5 chương. Đó là:
 \begin{itemize}
     \item Chương \ref{Chapter1}: GIỚI THIỆU.
     \item Chương \ref{Chapter2}: CÁC HỆ THỐNG VÀ CÔNG NGHỆ LIÊN QUAN.
-    \item Chương \ref{Chapter3}: THỰC HIỆN NỀN TẢNG IOT SỬ DỤNG HỆ THỐNG BACK-END GIAO TIẾP PHẦN CỨNG QUA WIFI KẾT HỢP KỸ THUẬT MẬT MÃ HÓA NHẸ.
+    \item Chương \ref{Chapter3}: \textsc{\tenKL}.
     \item Chương \ref{Chapter4}: KẾT QUẢ.
     \item Chương \ref{Chapter5}: KẾT LUẬN.
 \end{itemize}
@@ -102,7 +102,7 @@ Báo cáo khóa luận được chia thành 5 chương. Đó là:
 
 Tiếp theo, chương \ref{Chapter2} đưa ra các đánh giá và khảo sát các hệ thống \acrshort{iot} trong việc giải quyết vấn đề của khóa luận. Hơn nữa, chương này còn đưa ra mô hình hệ thống \acrshort{iot} được đề xuất và các lý thuyết xây dựng hệ thống \acrshort{iot} được đưa ra.
 
-Trong việc triển khai hệ thống, chương \ref{Chapter3} trình bày các phương pháp và giải phát đề xuất đề xây dựng hệ thống \acrshort{iot}. Các nội dung này được trình bày các phương pháp và giải pháp trên việc xây dựng mô hình, bo mạch, giao diện web, và hệ thống back-end.
+Trong việc triển khai hệ thống, chương \ref{Chapter3} trình bày các phương pháp và giải phát đề xuất đề xây dựng hệ thống \acrshort{iot}. Các nội dung này trình bày các phương pháp và giải pháp trên việc xây dựng mô hình, bo mạch, giao diện web, và hệ thống back-end.
 
 Về các kết quả, chương \ref{Chapter4} đưa ra các kết quả đã đạt được trên phần cứng, \acrshort{vps}, và giao diện web.
 
