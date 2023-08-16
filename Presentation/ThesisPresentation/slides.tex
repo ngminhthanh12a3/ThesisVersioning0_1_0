@@ -1,0 +1,60 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage{hyperref}
+% \usepackage[T1]{fontenc}
+
+% other packages
+\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
+\usepackage{graphicx,pstricks,listings,stackengine}
+\usepackage{caption, subfigure}
+
+% xmu beamer
+\usepackage[blue]{TKKCBeamer}	%厦大蓝
+% \usepackage{TKKCBeamer}	%厦大蓝主题色，但无背景
+% \usepackage[red]{TKKCBeamer}%嘉庚
+
+\author[Nguyễn Vũ Minh Thành]{Nguyễn Vũ Minh Thành - 19207103\\
+Người hướng dẫn khoa học: TS. Lê Đức Hùng}
+\title[NỀN TẢNG IOT KẾT~HỢP KỸ~THUẬT MẬT~MÃ~HÓA~NHẸ]{THỰC HIỆN NỀN TẢNG IOT SỬ DỤNG HỆ~THỐNG~BACK-END GIAO~TIẾP PHẦN~CỨNG QUA~WIFI KẾT~HỢP KỸ~THUẬT MẬT~MÃ~HÓA~NHẸ}
+\subtitle{\textrm{KHÓA LUẬN TỐT NGHIỆP CỬ NHÂN}}
+\institute{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH
+\\TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN
+\\KHOA ĐIỆN TỬ - VIỄN THÔNG}
+\date{25/08/2023}
+
+% defs6
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{red!0!green!0!blue!100},
+    emphstyle=\ttfamily\color{red!100!green!0!blue!0},    % Custom highlighting style
+    stringstyle=\color{red!0!green!100!blue!0},
+    numbers=left,
+    numberstyle=\small\color{gray!50},
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    frame=shadowbox
+}
+
+% Clear background
+% \usebackgroundtemplate{}
+
+\begin{document}
+\input{slides/title}
+
+\begin{frame}{Giới thiệu đề tài và Mục lục}
+    \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+\end{frame}
+
+\input{slides/overview}
+\input{slides/mainContent}
+\input{slides/result}
+\input{slides/conclusion}
+
+\begin{frame}
+    \begin{center}
+        {\Huge\calligra Thank you for your attention!}
+    \end{center}
+\end{frame}
+
+\end{document}

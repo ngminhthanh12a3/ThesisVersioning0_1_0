@@ -1,6 +1,17 @@
 # Thesis Versioning
 [Thesis link](https://www.overleaf.com/read/mwzrhwrbmxhb)
 
+## 0.11.0
+`16-08-2023`
+
+- [x] Thêm phần cảm ơn anh Hồ Như Tuấn và bạn Trần Tấn Tài.
+- Chỉnh các lỗi chính tả (2)
+	- [x] Chapter 1
+		- [x] Bố cục (17)
+	- [x] Chapter 2
+		- [x] Hệ thống IoT sử dụng nền tảng Blynk (18)
+- [x] Thêm phần tóm tắt cho chương 1, chương 2.
+
 ## 0.10.0
 `14-08-2023`
 

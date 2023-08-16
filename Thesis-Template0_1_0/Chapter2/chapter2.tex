@@ -1,6 +1,8 @@
 \chapter{CÁC HỆ THỐNG VÀ CÔNG NGHỆ LIÊN QUAN}
 \label{Chapter2}
 
+Chương \ref{Chapter2} đưa ra các khảo sát và đánh giá một số giải pháp \acrshort{iot}. Cụ thể, các giải pháp sử dụng nền tảng Blynk, ThingsBoard, và ESP32 web server chế độ Access~Point sẽ được đánh giá và nhận định. Cuối cùng, mô hình hệ thống \acrshort{iot} được sử dụng để đưa ra giải pháp cho việc giám sát và điều khiển các trạm \acrshort{bts} online, sẽ được trình bày ở mục \ref{IoT-system-model-using-DESLab-board-communcating-VPS}.
+
 \section{Hệ thống IoT sử dụng nền tảng Blynk}
 
 \subsection{Tổng quan về Blynk}
@@ -16,7 +18,7 @@ Trong việc giám sát \acrshort{bts}, thiết kế, và triển khai hệ th�
 Tại phần cứng, Blynk Library thư viện portable C++ dễ sử dụng và có thể chạy trên nhiều bo mạch. Cụ thể, thư viện này có thể cài đặt trên ESP32 \acrshort{iot} gateway của bo mạch của \acrshort{ptn} DESLab. Hơn nữa, Blynk Library dễ dàng cấu hình khi sử dụng Blynk Edgent. Đây là giải pháp được thiết kế để đơn giản hóa các kết nối của các thiết bị tới Blynk cloud. Vì vậy, Blynk Library và Edgent là những giải pháp phần cứng để triển khai giao thức kết nối tới cloud trên bo mạch.
 
     % Giải pháp cấu hình
-Về mặt cấu hình, Blynk Console là ứng dụng web nhiều tính năng phục vụ cho nhiều đối tượng người dùng. Ứng dụng này cung cấp các template có sẵn để giúp người dùng dễ dàng cấu hình như General Setting, Datastream, Event, Notification, ... Dựa trên ứng dụng web Blynk Console, người dùng dễ dàng cấu hình các kênh dữ liệu cũng như kiểu dữ liệu của các Datastream. Từ đó, các cấu hình này tạo ra cơ sở dữ liệu lưu trữ các giá trị từ phần cứng và trực quan hóa các dữ liệu.
+Về mặt cấu hình, Blynk Console là ứng dụng web nhiều tính năng phục vụ cho nhiều đối tượng người dùng. Ứng dụng này cung cấp các template có sẵn để giúp người dùng dễ dàng cấu hình General Setting, Datastream, Event, Notification, ... Dựa trên ứng dụng web Blynk Console, người dùng dễ dàng cấu hình các kênh dữ liệu cũng như kiểu dữ liệu của các Datastream. Từ đó, các cấu hình này tạo ra cơ sở dữ liệu lưu trữ các giá trị từ phần cứng và trực quan hóa các dữ liệu.
 
     % Giải pháp giao diện
 Về mặt giao diện, nên tảng Blynk hỗ trợ người dùng giám sát và điều khiển các thiết bị trên dashboard trên nền tảng web và mobile app. Dựa trên các dashboard, người dùng có thể dễ dàng quản lý, quan sát dữ liệu từ thiết bị. Hơn nữa, đây là giao diện của no-code mobile app và web app, nên người dùng dễ dàng chỉnh sửa các widget trên giao diện hiển thị. Với các đặc tính của Blynk no-code editor, dashboard của hệ thống rất dễ dàng được thiết kế cho người dùng.
@@ -72,6 +74,7 @@ Cuối cùng, khi sử dụng mô hình ESP32 web server, người dùng chỉ c
 % Cần có giao thức giao tiếp, cơ chế đồng bộ, giao diện tùy chỉnh, và cách thức triển khai mật mã hóa rõ ràng.
 % viết về mô hình hệ thống iot sử dụng bo mạch phần cứng của PTN DESLab và máy chủ ảo
 \section{Mô hình hệ thống IoT sử dụng bo mạch của PTN DESLab giao tiếp với VPS}
+\label{IoT-system-model-using-DESLab-board-communcating-VPS}
 
 Đây là mô hình hệ thống \acrshort{iot} được áp dụng để giám sát các trạm \acrshort{bts}. Tại \acrshort{ptn} DESLab, mô hình này đã có kết quả để chạy và thử nghiệm trong thời gian ngắn hạn tại \acrshort{bts} của các quản trị viên \acrshort{vnpt}. Tuy nhiên, mô hình này vẫn phải đưa ra các khái niệm và kỹ thuật cốt lõi để có thể phát triển lâu dài. Trong khóa luận tốt nghiệp này, các khái niệm và kỹ thuật cốt lõi cần có, sẽ được trình bày và xây dựng để hệ thống \acrshort{iot} hiện tại, có thể tiếp tục phát triển. Các khái niệm cỗi lõi bao gồm mô hình-sơ đồ của hệ thống \acrshort{iot}, giao thức frame, cơ chế đồng bộ, cách thức triển khai mật mã hóa, và cách thức triển khai hệ thống back-end và giao diện.
 
