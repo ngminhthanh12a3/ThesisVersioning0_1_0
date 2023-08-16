@@ -6,7 +6,7 @@
 % Trước khi build, xóa hết các file được tạo ra trong quá trình build trước đó, và build theo thứ tự: BIB > PDF > PDF.
 % Nếu cập nhật tài liệu tham khảo, cũng cần build lại theo cách trên.
 
-\documentclass[oneside,a4paper,14pt]{extreport}
+\documentclass[twoside,a4paper,14pt]{extreport}
 % font size
 \usepackage[fontsize=13pt]{scrextend}
 % Font tiếng Việt
@@ -126,6 +126,7 @@
 
 % Canh lề
 \usepackage[
+  twoside,
   top=20mm,
   bottom=20mm,
   left=25mm,
@@ -140,6 +141,13 @@
 
 % Danh sách chữ viết tắt
 \usepackage{myacronyms}
+
+\newcommand\myemptypage{
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+}
 
 % ========================================================================================= %
 % CHÚ Ý: Thông tin chung về KLTN - sinh viên điền vào đây để tự động update các trang khác  %
@@ -198,7 +206,7 @@
 \addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
 
-\clearpage
+\cleardoublepage
 
 \pagenumbering{arabic} % Đánh số 1, 2, 3, ...
 

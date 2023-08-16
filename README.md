@@ -1,6 +1,13 @@
 # Thesis Versioning
 [Thesis link](https://www.overleaf.com/read/mwzrhwrbmxhb)
 
+## 0.12.0
+`16-08-2023`
+
+- Chỉnh sửa trước khi in
+	[x] Mirror magins
+	[x] Thêm các trang trắng vào sau trang bìa 1 và 2.
+
 ## 0.11.0
 `16-08-2023`
 
