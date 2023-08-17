@@ -1,12 +1,18 @@
 # Thesis Versioning
 [Thesis link](https://www.overleaf.com/read/mwzrhwrbmxhb)
 
+## 0.13.0
+`16-08-2023`
+
+- Thêm option **openright** để các chapter title luôn ở bên phải.
+- Chỉnh các chỉ số mục lục từ lời cảm ơn -> mục lục
+
 ## 0.12.0
 `16-08-2023`
 
 - Chỉnh sửa trước khi in
 	[x] Mirror magins
-	[x] Thêm các trang trắng vào sau trang bìa 1 và 2.
+	[x] Thêm các trang trắng vào sau trang bìa 1 và 2, lời cảm ơn, tóm tắt, abstract.
 
 ## 0.11.0
 `16-08-2023`

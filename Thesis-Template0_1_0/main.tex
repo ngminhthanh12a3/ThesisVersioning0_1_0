@@ -6,7 +6,7 @@
 % Trước khi build, xóa hết các file được tạo ra trong quá trình build trước đó, và build theo thứ tự: BIB > PDF > PDF.
 % Nếu cập nhật tài liệu tham khảo, cũng cần build lại theo cách trên.
 
-\documentclass[twoside,a4paper,14pt]{extreport}
+\documentclass[twoside,a4paper,14pt,openright]{extreport}
 % font size
 \usepackage[fontsize=13pt]{scrextend}
 % Font tiếng Việt
@@ -142,6 +142,9 @@
 % Danh sách chữ viết tắt
 \usepackage{myacronyms}
 
+% ifelse
+\usepackage{ifthen}
+
 \newcommand\myemptypage{
 \newpage
 \thispagestyle{empty}
@@ -168,19 +171,10 @@
 %\addcontentsline{toc}{chapter}{Lời cam đoan}
 %\include{Appendix/reassurances}
 
-\newpage
-\phantomsection
-\addcontentsline{toc}{chapter}{LỜI CẢM ƠN}
 \include{Appendix/thanks}
 
-\newpage
-\phantomsection
-\addcontentsline{toc}{chapter}{ABSTRACT}
 \include{Appendix/tomtat.en}
 
-\newpage
-\phantomsection
-\addcontentsline{toc}{chapter}{TÓM TẮT}
 \include{Appendix/tomtat}
 
 % \phantomsection
@@ -188,6 +182,7 @@
 % \include{Appendix/decuong}
 
 % Mục lục, danh sách hình, danh sách bảng
+\cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{MỤC LỤC}
 \tableofcontents
@@ -196,11 +191,14 @@
                 title=DANH SÁCH CHỮ VIẾT TẮT, 
                 toctitle=DANH SÁCH CHỮ VIẾT TẮT
                 ]
+
+\cleardoublepage
 \newpage
 \phantomsection
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 
+\cleardoublepage
 \newpage
 \phantomsection
 \addcontentsline{toc}{chapter}{\listtablename}
@@ -220,12 +218,17 @@
 \include{Chapter4/chapter4}
 
 \include{Chapter5/chapter5}
+
 % Công trình của tác giả (nếu không có thì comment 02 dòng dưới)
+\cleardoublepage
+\newpage
 \phantomsection
 \addcontentsline{toc}{chapter}{DANH MỤC CÔNG TRÌNH CỦA TÁC GIẢ}
 \include{Appendix/publish}
 
 % In tài liệu tham khảo
+\cleardoublepage
+\newpage
 \phantomsection
 \addcontentsline{toc}{chapter}{TÀI LIỆU THAM KHẢO}
 \printbibheading[title={TÀI LIỆU THAM KHẢO}]
