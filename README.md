@@ -11,8 +11,8 @@
 `16-08-2023`
 
 - Chỉnh sửa trước khi in
-	[x] Mirror magins
-	[x] Thêm các trang trắng vào sau trang bìa 1 và 2, lời cảm ơn, tóm tắt, abstract.
+	- [x] Mirror magins
+	- [x] Thêm các trang trắng vào sau trang bìa 1 và 2, lời cảm ơn, tóm tắt, abstract.
 
 ## 0.11.0
 `16-08-2023`
@@ -58,15 +58,15 @@
 		- [x] Đóng góp
 		- [x] Bố cục (18)
 	- [x] Chương 2
-		[x] Hệ thống IoT sử dụng nền tảng Blynk (19)
-		[x] Hệ thống IoT sử dụng ThingsBoard
-		[x] Các hệ thống IoT đơn giản sử dụng ESP32 web server chế độ Access Point
-		[x] Mô hình hệ thống IoT sử dụng bo mạch của PTN DESLab giao tiếp với VPS (22, 24, 25(3), 29, 32(2))
+		- [x] Hệ thống IoT sử dụng nền tảng Blynk (19)
+		- [x] Hệ thống IoT sử dụng ThingsBoard
+		- [x] Các hệ thống IoT đơn giản sử dụng ESP32 web server chế độ Access Point
+		- [x] Mô hình hệ thống IoT sử dụng bo mạch của PTN DESLab giao tiếp với VPS (22, 24, 25(3), 29, 32(2))
 	- [x] CHƯƠNG 3:
-		[x] Mô hình hệ thống IoT
-		[x] Bo mạch phần cứng
-		[x] Hệ thống back-end (43(2), 44)
-		[x] Giao diện web (47)
+		- [x] Mô hình hệ thống IoT
+		- [x] Bo mạch phần cứng
+		- [x] Hệ thống back-end (43(2), 44)
+		- [x] Giao diện web (47)
 	- [x] Chương 4
 		- [x] Kết quả trên phần cứng (51(2))
 		- [x] Kết quả trên VPS (53(3), 55(2), 57)
@@ -93,7 +93,7 @@ hạn của đề tài
 
 ## 0.7.0
 `09-08-2023`
-- Change Thesis title: THỰC HIỆN NỀN TẢNG IOT SỬ DỤNG **HỆ THỐNG BACK-END** GIAO~TIẾP PHẦN CỨNG QUA WIFI KẾT HỢP KỸ THUẬT MẬT~MÃ~HÓA~NHẸ
+- Change Thesis title: THỰC HIỆN NỀN TẢNG IOT SỬ DỤNG **HỆ THỐNG BACK-END** GIAO TIẾP PHẦN CỨNG QUA WIFI KẾT HỢP KỸ THUẬT MẬT MÃ HÓA NHẸ.
 - [x] Chapter 4: KẾT QUẢ (11 pages)
 	- [x] Kết quả phần cứng (4 pages)
 		[x] - Kết quả giao tiếp

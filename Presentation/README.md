@@ -1,5 +1,20 @@
 # Thesis Presentation
 
+## 0.1.0
+`17-08-2023`
+
+- [x] Thesis Script (12p)
+	- [x] Tổng quan (1 slide)
+		- [x] Giải pháp.
+		- [x] Mô hình IoT 4 lớp.
+	- [x] Nội dung chính đã thực hiện (4p)
+		- [x] Giao thức frame.
+		- [x] Cơ chế đồng bộ.
+		- [x] Giao diện web linh hoạt.
+		- [x] Hệ thống back-end
+	- [x] Kết quả (1p)
+	- [x] Kết luận, hướng mở rộng (1p)
+
 ## 0.0.0
 `15-08-2023`
 
@@ -18,4 +33,3 @@
 	- [ ] Nội dung chính đã thực hiện và kết quả (5p)
 	- [ ] Biểu diễn kết quả (3p)
 	- [ ] Kết luận, hướng mở rộng (1p)
-	

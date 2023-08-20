@@ -12,9 +12,16 @@
 % \usepackage{TKKCBeamer}	%厦大蓝主题色，但无背景
 % \usepackage[red]{TKKCBeamer}%嘉庚
 
+% 
+
+\usepackage{appendixnumberbeamer}
+
 \author[Nguyễn Vũ Minh Thành]{Nguyễn Vũ Minh Thành - 19207103\\
 Người hướng dẫn khoa học: TS. Lê Đức Hùng}
-\title[NỀN TẢNG IOT KẾT~HỢP KỸ~THUẬT MẬT~MÃ~HÓA~NHẸ]{THỰC HIỆN NỀN TẢNG IOT SỬ DỤNG HỆ~THỐNG~BACK-END GIAO~TIẾP PHẦN~CỨNG QUA~WIFI KẾT~HỢP KỸ~THUẬT MẬT~MÃ~HÓA~NHẸ}
+\title
+[NỀN TẢNG IOT KẾT~HỢP KỸ~THUẬT MẬT~MÃ~HÓA~NHẸ]
+{THỰC HIỆN NỀN TẢNG IOT SỬ DỤNG HỆ~THỐNG~BACK-END GIAO~TIẾP PHẦN~CỨNG QUA~WIFI KẾT~HỢP KỸ~THUẬT MẬT~MÃ~HÓA~NHẸ}
+
 \subtitle{\textrm{KHÓA LUẬN TỐT NGHIỆP CỬ NHÂN}}
 \institute{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH
 \\TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN
@@ -36,25 +43,33 @@ Người hướng dẫn khoa học: TS. Lê Đức Hùng}
     frame=shadowbox
 }
 
+\usepackage{tcolorbox}
+
+\NewTColorBox{mybox}{ O{red} m d"" !O{} }
+{colframe=#1!75!black,colback=#1!5!white,
+fonttitle=\bfseries,title={#2},
+IfValueT={#3}{watermark text={#3}},#4}
+
 % Clear background
 % \usebackgroundtemplate{}
 
 \begin{document}
 \input{slides/title}
 
-\begin{frame}{Giới thiệu đề tài và Mục lục}
+\begin{frame}{MỤC LỤC}
     \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
 \end{frame}
 
+\input{slides/introduction}
 \input{slides/overview}
 \input{slides/mainContent}
 \input{slides/result}
 \input{slides/conclusion}
 
-\begin{frame}
-    \begin{center}
-        {\Huge\calligra Thank you for your attention!}
-    \end{center}
-\end{frame}
+\appendix
+\input{slides/thanks}
+
+\input{slides/publication}
 
 \end{document}
+
