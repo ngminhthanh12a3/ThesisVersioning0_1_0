@@ -1,5 +1,16 @@
 # Thesis Presentation
 
+## 0.2.0
+`20-08-2023`
+
+- Thời lượng trình bày 6p15s / 9p, cần tăng thêm 2p30s.
+	- [x] Viết lại **Giới thiệu đề tài**.
+	- [x] Viết chi tiết về **Bo mạch và hệ thống back-end**.
+- Thời lượng trình bày 6p42s / 9p, cần tăng thêm 2p.
+	- [x] Viết chi tiết về **cơ chế đồng bộ**.
+	- [x] Viết chi tiết về **giao thức frame**
+	- [ ] Viết về **mật mã hóa ChaCha20-Poly1305**.
+
 ## 0.1.0
 `17-08-2023`
 

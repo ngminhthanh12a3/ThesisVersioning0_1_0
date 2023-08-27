@@ -1,6 +1,6 @@
 \section{Nội dung thực hiện}
 
-\begin{frame}{GIAO THỨC GIAO TIẾP}
+\begin{frame}{GIAO THỨC FRAME}
     \begin{figure}
     	\centering
     	\includegraphics[width=1.0\textwidth,height=.8\textheight]{pic/Presentation-Page-2-Frame-Structure-Overview.pdf}
@@ -43,6 +43,30 @@
     	\end{minipage}
 	}
 \end{figure}
-   
-    
+\end{frame}
+
+\begin{frame}{MẬT MÃ HÓA CHACHA20-POLY1305}
+	Sự kết hợp của thuật toán mã hóa dòng ChaCha20 và xác thực tin nhắn Poly1305.
+
+	\begin{figure}
+		\subfigure
+		{
+		\begin{minipage}{0.3\linewidth}
+    		\begin{figure}
+    			\raggedright
+    			\includegraphics[scale=0.5]{pic/Presentation-Page-10-Frame-Body-Encrypt-Structure.pdf}
+    		\end{figure}
+    	\end{minipage}
+		}
+		\subfigure
+		{
+		\begin{minipage}{0.6\linewidth}
+    		\begin{figure}
+    			\hspace*{.5cm}
+				\raggedright
+    			\includegraphics[width=1.0\textwidth,height=.7\textheight]{pic/Presentation-Page-9-CC20-P1305-Process.pdf}
+    		\end{figure}
+    	\end{minipage}
+		}
+	\end{figure}
 \end{frame}
