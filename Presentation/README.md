@@ -9,7 +9,10 @@
 - Thời lượng trình bày 6p42s / 9p, cần tăng thêm 2p.
 	- [x] Viết chi tiết về **cơ chế đồng bộ**.
 	- [x] Viết chi tiết về **giao thức frame**
-	- [ ] Viết về **mật mã hóa ChaCha20-Poly1305**.
+	- [x] Viết về **mật mã hóa ChaCha20-Poly1305**.
+		- [x] Tổng quan về thuật toán.
+		- [x] Cách thức triển khai thuật toán.
+		- [x] Quá trình mã hóa/giải mã xác thực với dữ liệu liên kết.
 
 ## 0.1.0
 `17-08-2023`
