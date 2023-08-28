@@ -18,7 +18,10 @@ Ngày bảo vệ đề tài: 25/08/2023.
 
 ## Hệ thống ngữ nghĩa của đề tài
 
-Hệ thống ngữ nghĩa của đề tài được trình bày trong file [SemanticVersioning.md](./SemanticVersioning.md).
+- Hệ thống ngữ nghĩa của đề tài được trình bày trong file [SemanticVersioning.md](./SemanticVersioning.md).
+- Việc viết báo cáo và trình bày KLTN tuân theo hướng dẫn của các tài liệu tham khảo sau: 
+	- [Huong-dan-viet-va-trinh-bay-Khoa-luan_2020_compressed.pdf](./references/Huong-dan-viet-va-trinh-bay-Khoa-luan_2020_compressed.pdf).
+	- [Huong_dan_ve_khoa_luan_tot_nghiep_2022.pdf](./references/Huong_dan_ve_khoa_luan_tot_nghiep_2022.pdf)
 
 ## Các template của đề tài
 

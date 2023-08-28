@@ -1,5 +1,13 @@
 # Thesis Versioning
 
+## 0.15.0-final.summary
+`28-08-2023`
+
+- Update References
+	- Huong-dan-viet-va-trinh-bay-Khoa-luan_2020_compressed.pdf
+	- Huong dan ve khoa luan tot nghiep_2022\[Mẫu Báo cáo KLTN\]Unicode\[Update 8_2023\].pdf
+- Update build without references.
+
 ## 0.14.0-final.summary
 `27-08-2023`
 
