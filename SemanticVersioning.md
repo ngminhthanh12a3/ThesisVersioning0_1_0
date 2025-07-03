@@ -1,6 +1,13 @@
 # Thesis Versioning
 
+## 0.16.0
+
+`03-07-2025`
+
+- Update title pages following [Huong-dan-ve-khoa-luan-tot-nghiep_2022Mau-Bao-cao-KLTNUnicodeUpdate-8_2023.pdf](references/Huong-dan-ve-khoa-luan-tot-nghiep_2022Mau-Bao-cao-KLTNUnicodeUpdate-8_2023.pdf)
+
 ## 0.15.0-final.summary
+
 `28-08-2023`
 
 - Update References
@@ -9,6 +16,7 @@
 - Update build without references.
 
 ## 0.14.0-final.summary
+
 `27-08-2023`
 
 - Add additional pages
@@ -23,12 +31,14 @@
 
 
 ## 0.13.0
+
 `16-08-2023`
 
 - Thêm option **openright** để các chapter title luôn ở bên phải.
 - Chỉnh các chỉ số mục lục từ lời cảm ơn -> mục lục
 
 ## 0.12.0
+
 `16-08-2023`
 
 - Chỉnh sửa trước khi in
@@ -36,6 +46,7 @@
 	- [x] Thêm các trang trắng vào sau trang bìa 1 và 2, lời cảm ơn, tóm tắt, abstract.
 
 ## 0.11.0
+
 `16-08-2023`
 
 - [x] Thêm phần cảm ơn anh Hồ Như Tuấn và bạn Trần Tấn Tài.
@@ -47,6 +58,7 @@
 - [x] Thêm phần tóm tắt cho chương 1, chương 2.
 
 ## 0.10.0
+
 `14-08-2023`
 
 - Chỉnh sửa theo bản cứng (lần 1).
@@ -66,6 +78,7 @@
 		- [x] 4.1 Kết quả trên phần cứng (37)
 		- [x] 4.2 Kết quả trên VPS(42, 43)
 ## 0.9.0
+
 `13-08-2023`
 - Check lỗi chính tả bản mềm (lần 1).
 	- [x] Bìa
@@ -94,6 +107,7 @@
 		- [x] Kết quả giao diện web
 	- [x] Chương 5 (62)
 ## 0.8.0
+
 `12-08-2023`
 
 - [x] Làm khớp mục tiêu của tóm tắt, chương 1, và chương 5.
@@ -113,6 +127,7 @@ hạn của đề tài
 - Thay đổi thuật ngữ cloud.
 
 ## 0.7.0
+
 `09-08-2023`
 - Change Thesis title: THỰC HIỆN NỀN TẢNG IOT SỬ DỤNG **HỆ THỐNG BACK-END** GIAO TIẾP PHẦN CỨNG QUA WIFI KẾT HỢP KỸ THUẬT MẬT MÃ HÓA NHẸ.
 - [x] Chapter 4: KẾT QUẢ (11 pages)
@@ -126,7 +141,9 @@ hạn của đề tài
 		- [x] Hiển thị dữ liệu của thiết bị
 		- [x] Cấu hình PWA
 ## 0.6.0
+
 `05-08-2023`
+
 - New acronym: VLAN, UART, HTTPS, VS, REST, CRUD, JSON.
 - [x] Chapter 3: THỰC HIỆN NỀN TẢNG IOT SỬ DỤNG CLOUD GIAO TIẾP PHẦN CỨNG KẾT HỢP KỸ THUẬT MẬT MÃ HÓA NHẸ (16 pages)
 	- [x] Dẫn nhập.
@@ -145,6 +162,7 @@ hạn của đề tài
 	- [x] Giao diện web (5 pages)
 	
 ## 0.5.0
+
 `31-07-2023`
 
 - Acronym for PTN, HTTP, GPIO, AEAD, AES, XOR, AAD.
@@ -163,7 +181,9 @@ hạn của đề tài
 		- [x] Mật mã hóa nhẹ ChaCha20-Poly1305
 		
 ## 0.4.0
+
 `22-07-2023`
+
 - VĐK -> MCU
 - Fix **fig:IoT-4-Layer-Archi**
 - Use acronym for MQTT, VPS
@@ -176,7 +196,9 @@ hạn của đề tài
 - [x] Make demo script.
 
 ## 0.3.0
+
 `14-07-2023`
+
 - Chỉnh sửa **Cách thức trình bày trong template**
 	- [x] Cỡ chữ 13
 	- [x] lề trên/dưới/phải 2 cm
@@ -207,15 +229,20 @@ hạn của đề tài
 		- [x] Đóng góp của nghiên cứu/ứng dụng của bạn?
 	- [ ] 5. Bố cục
 ## 0.2.0
+
 `14-07-2023`
+
 - [x] Tóm tắt. (100-300 từ, 4-10 câu)
 	- [x] Ngữ cảnh, vấn đề. (2 câu)
 	- [x] Mục tiêu. (1 câu)
 	- [x] Phương pháp. (2 câu)
 	- [x] Kết quả. (2 câu)
 	- [x] Kết luận. (2 câu)
+	
 ## 0.1.0
+
 `13-07-2023`
+
 - [x] Lời cảm ơn. (1 trang)
 	- [x] Lời cảm ơn tới TS. Lê Đức Hùng.
 	- [x] Lời cảm ơn tới Nguyễn Văn Nhị.
@@ -223,7 +250,9 @@ hạn của đề tài
 	- [x] Thầy cô trong khoa.
 
 ## 0.0.0
+
 `13-07-2023`
+
 - Clone template.
 - Chỉnh sửa 2 trang bìa.
 	- Tên khoa.
