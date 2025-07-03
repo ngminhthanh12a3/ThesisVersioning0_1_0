@@ -25,6 +25,7 @@ Ngày bảo vệ đề tài: 25/08/2023.
 
 ## Các template của đề tài
 
+- File kết quả PDF: [Thesis_Template0_1_0.pdf](./Thesis_Template0_1_0.pdf).
 - Các template của đề tài được xây dựng trên hệ thống soạn thảo latex.
 
 - Các template online trên Overleaf:
