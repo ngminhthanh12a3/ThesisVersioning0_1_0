@@ -35,3 +35,6 @@ Ngày bảo vệ đề tài: 25/08/2023.
 	- [Hướng dẫn sử dụng offline template](./OfflineInstruction.md).
 	- [Template offline của báo cáo KLTN](./Thesis-Template0_1_0)
 	- [Template offline của bản trình bày KLTN](./Presentation/ThesisPresentation)
+ ## Công bố khoa học liên quan đến đề tài
+
+ - [Thanh, Nguyen Vu Minh. "Implementation of ChaCha20-Poly1305 on Self-Organization Data Framing for Enhancing IoT Communication." REV Journal on Electronics and Communications 14.4 (2024).](https://rev-jec.org/index.php/rev-jec/article/view/368)
